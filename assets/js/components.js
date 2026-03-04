@@ -61,17 +61,20 @@
                     <li class="menu-item-has-children${activeClass(['index.html', ''])}">
                       <a href="index.html">Home</a>
                     </li>
-                    <li class="menu-item-has-children${activeClass(['service-details.html'])}">
-                      <a href="index.html#service">Features</a>
+                    <li class="menu-item-has-children${activeClass(['about-us.html'])}">
+                      <a href="about-us.html">About</a>
+                    </li>
+                    <li class="menu-item-has-children${activeClass(['features.html'])}">
+                      <a href="features.html">Features</a>
                     </li>
                     <li class="menu-item-has-children">
                       <a href="#">Exams</a>
                       <ul class="sub-menu">
-                        <li><a href="#">WAEC</a></li>
-                        <li><a href="#">JAMB</a></li>
-                        <li><a href="#">NECO</a></li>
-                        <li><a href="#">Post UTME</a></li>
-                        <li><a href="#">GCE</a></li>
+                        <li><a href="features.html#exam-coverage">WAEC</a></li>
+                        <li><a href="features.html#exam-coverage">JAMB</a></li>
+                        <li><a href="features.html#exam-coverage">NECO</a></li>
+                        <li><a href="features.html#exam-coverage">Post UTME</a></li>
+                        <li><a href="features.html#exam-coverage">GCE</a></li>
                       </ul>
                     </li>
                     <li class="menu-item-has-children${activeClass(['single-post.html', 'single-news.html', 'news.html'])}">
@@ -130,7 +133,8 @@
     /* active nav items */
     var isBlog    = activeClass(['single-post.html', 'single-news.html', 'news.html']) !== '';
     var isContact = activeClass(['contact.html']) !== '';
-    var isFeature = activeClass(['service-details.html']) !== '';
+    var isFeature = activeClass(['features.html']) !== '';
+    var isAbout   = activeClass(['about-us.html']) !== '';
     var isHomeAct = activeClass(['index.html', '']) !== '';
 
     function liClass(flag) { return flag ? ' class="active"' : ''; }
@@ -155,15 +159,16 @@
                 <div class="appie-header-main-menu">
                   <ul>
                     <li${liClass(isHomeAct)}><a href="index.html">Home</a></li>
-                    <li${liClass(isFeature)}><a href="index.html#service">Features</a></li>
+                    <li${liClass(isAbout)}><a href="about-us.html">About</a></li>
+                    <li${liClass(isFeature)}><a href="features.html">Features</a></li>
                     <li>
                       <a href="#">Exams <i class="fal fa-angle-down"></i></a>
                       <ul class="sub-menu">
-                        <li><a href="#">WAEC</a></li>
-                        <li><a href="#">JAMB</a></li>
-                        <li><a href="#">NECO</a></li>
-                        <li><a href="#">Post UTME</a></li>
-                        <li><a href="#">GCE</a></li>
+                        <li><a href="features.html#exam-coverage">WAEC</a></li>
+                        <li><a href="features.html#exam-coverage">JAMB</a></li>
+                        <li><a href="features.html#exam-coverage">NECO</a></li>
+                        <li><a href="features.html#exam-coverage">Post UTME</a></li>
+                        <li><a href="features.html#exam-coverage">GCE</a></li>
                       </ul>
                     </li>
                     <li${liClass(isBlog)}>
@@ -228,8 +233,8 @@
               <div class="footer-navigation footer-navigation-5">
                 <h4 class="title">Product</h4>
                 <ul>
-                  <li><a href="index.html#service">Features</a></li>
-                  <li><a href="index.html#features">About</a></li>
+                  <li><a href="features.html">Features</a></li>
+                  <li><a href="about-us.html">About Us</a></li>
                   <li><a href="single-post.html">Blog</a></li>
                   <li><a href="single-post.html?q=study tips">Study Tips</a></li>
                   <li><a href="single-post.html?q=success">Success Stories</a></li>

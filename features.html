@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Explore Preplok's powerful AI-driven features — past questions, mock exams, smart hints, performance analytics and more for WAEC, JAMB, NECO, Post UTME and GCE.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Features | Preplok - Nigeria's AI-Powered Exam Prep App</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/custom-animation.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* ── Feature Cards ── */
+        .feature-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 36px 30px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            transition: transform .3s ease, box-shadow .3s ease;
+            height: 100%;
+            border-bottom: 3px solid transparent;
+        }
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(122,90,248,0.15);
+            border-bottom-color: #7a5af8;
+        }
+        .feature-card .icon {
+            width: 64px; height: 64px;
+            border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 26px; color: #fff;
+            margin-bottom: 22px;
+        }
+        .icon-purple  { background: linear-gradient(135deg,#7a5af8,#a78bfa); }
+        .icon-green   { background: linear-gradient(135deg,#10b981,#34d399); }
+        .icon-blue    { background: linear-gradient(135deg,#3b82f6,#60a5fa); }
+        .icon-orange  { background: linear-gradient(135deg,#f59e0b,#fbbf24); }
+        .icon-red     { background: linear-gradient(135deg,#ef4444,#f87171); }
+        .icon-teal    { background: linear-gradient(135deg,#14b8a6,#2dd4bf); }
+        .icon-indigo  { background: linear-gradient(135deg,#6366f1,#818cf8); }
+        .icon-pink    { background: linear-gradient(135deg,#ec4899,#f472b6); }
+
+        .feature-card h4 { font-size: 18px; font-weight: 700; color: #1a1a2e; margin-bottom: 12px; }
+        .feature-card p  { font-size: 14px; color: #555; line-height: 1.75; margin: 0; }
+
+        /* ── Exam pills ── */
+        .exam-pill {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: #f5f0ff; border: 1px solid #e0d5ff;
+            border-radius: 12px; padding: 14px 20px;
+            font-weight: 600; color: #5b21b6; font-size: 15px;
+            transition: all .25s;
+        }
+        .exam-pill:hover { background: #7a5af8; color: #fff; border-color: #7a5af8; }
+        .exam-pill i { font-size: 20px; }
+
+        /* ── Stats ── */
+        .stat-box {
+            background: linear-gradient(135deg,#7a5af8,#5b21b6);
+            border-radius: 16px; padding: 32px 24px; text-align: center; color: #fff;
+        }
+        .stat-box .number { font-size: 40px; font-weight: 800; letter-spacing: -1px; }
+        .stat-box .label  { font-size: 14px; opacity: .85; margin-top: 4px; }
+
+        /* ── Roadmap timeline ── */
+        .timeline-item { display:flex; gap:24px; margin-bottom:36px; }
+        .timeline-dot {
+            width:48px; height:48px; border-radius:50%; display:flex;
+            align-items:center; justify-content:center;
+            color:#fff; font-size:18px; flex-shrink:0;
+        }
+        .dot-1 { background:linear-gradient(135deg,#7a5af8,#a78bfa); }
+        .dot-2 { background:linear-gradient(135deg,#f59e0b,#fbbf24); }
+        .dot-3 { background:linear-gradient(135deg,#10b981,#34d399); }
+        .timeline-content h5 { font-weight:700; margin-bottom:6px; color:#1a1a2e; font-size:16px; }
+        .timeline-content p  { font-size:14px; color:#777; margin:0; line-height:1.7; }
+
+        /* ── CTA band ── */
+        .features-cta-band {
+            background: linear-gradient(135deg,#1a1a2e 0%,#2d1b69 60%,#7a5af8 100%);
+            border-radius: 20px; padding: 60px 48px; color: #fff; text-align: center;
+        }
+        .features-cta-band h2 { font-size: 32px; font-weight: 800; margin-bottom: 14px; }
+        .features-cta-band p  { font-size: 16px; opacity: .8; max-width: 560px; margin: 0 auto 30px; }
+        .cta-btn-row { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+        .btn-cta-ios,
+        .btn-cta-android {
+            display:inline-flex; align-items:center; gap:10px;
+            padding:14px 28px; border-radius:50px; font-weight:700; font-size:15px;
+            transition:all .25s;
+        }
+        .btn-cta-ios     { background:#fff; color:#1a1a2e; }
+        .btn-cta-android { background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,255,255,.3); }
+        .btn-cta-ios:hover     { background:#f0ebff; color:#7a5af8; }
+        .btn-cta-android:hover { background:rgba(255,255,255,.25); color:#fff; }
+
+        section.pt-80  { padding-top:80px; }
+        section.pb-80  { padding-bottom:80px; }
+        section.py-80  { padding-top:80px; padding-bottom:80px; }
+        .section-heading { margin-bottom:48px; }
+        .section-heading .tag {
+            display:inline-block; background:#f0ebff; color:#7a5af8;
+            padding:6px 16px; border-radius:20px; font-size:13px; font-weight:600;
+            margin-bottom:14px;
+        }
+        .section-heading h2 { font-size:34px; font-weight:800; color:#1a1a2e; line-height:1.25; margin-bottom:14px; }
+        .section-heading p  { font-size:16px; color:#777; max-width:580px; }
+        @media(max-width:768px){
+            .section-heading h2 { font-size:26px; }
+            .features-cta-band { padding:40px 24px; }
+            .features-cta-band h2 { font-size:24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!--====== PRELOADER ======-->
+    <div class="loader-wrap">
+        <div class="preloader"><div class="preloader-close">Preloader Close</div></div>
+        <div class="layer layer-one"><span class="overlay"></span></div>
+        <div class="layer layer-two"><span class="overlay"></span></div>
+        <div class="layer layer-three"><span class="overlay"></span></div>
+    </div>
+    <!--====== PRELOADER ENDS ======-->
+
+    <!--====== SHARED COMPONENTS ======-->
+    <div id="app-overlays"></div>
+    <div id="app-header"></div>
+    <!--====== SHARED COMPONENTS ENDS ======-->
+
+    <!--====== PAGE TITLE ======-->
+    <div class="appie-page-title-area appie-page-service-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="appie-page-title-item">
+                        <span>Everything You Need to Ace Your Exams</span>
+                        <h3 class="title">Preplok Features &mdash; <br>Built for Nigerian Students</h3>
+                        <div class="thumb">
+                            <img src="assets/images/fun-fact-thumb.png" alt="Preplok Features">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PAGE TITLE ENDS ======-->
+
+
+    <!-- ═══════════════════════════════════════════════════
+         CORE FEATURES GRID
+    ═══════════════════════════════════════════════════ -->
+    <section class="py-80">
+        <div class="container">
+            <div class="section-heading text-center mx-auto">
+                <span class="tag">Core Features</span>
+                <h2>Everything you need, <br>all in one app</h2>
+                <p>Preplok combines AI intelligence with thousands of real exam questions to give Nigerian students the most effective prep tool available.</p>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Feature 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="icon icon-purple">
+                            <i class="fal fa-brain"></i>
+                        </div>
+                        <h4>AI-Powered Hints</h4>
+                        <p>Stuck on a question? Our AI engine generates smart, contextual hints that guide your thinking without giving away the answer — so you actually learn.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="icon icon-blue">
+                            <i class="fal fa-book-open"></i>
+                        </div>
+                        <h4>Vast Past Questions Bank</h4>
+                        <p>Access thousands of authentic past questions from WAEC, JAMB, NECO, Post UTME, and GCE — curated, verified, and organized by subject and year.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="icon icon-green">
+                            <i class="fal fa-stopwatch"></i>
+                        </div>
+                        <h4>Timed Mock Exams</h4>
+                        <p>Simulate the real exam experience with timed sessions that mirror actual exam conditions — complete with scoring, question randomization, and pressure-testing.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="icon icon-orange">
+                            <i class="fal fa-chart-line"></i>
+                        </div>
+                        <h4>Performance Analytics</h4>
+                        <p>Detailed dashboards show your strengths, weak spots by topic, score trends over time, and how you compare against your personal bests — personalized for you.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="icon icon-teal">
+                            <i class="fal fa-lightbulb"></i>
+                        </div>
+                        <h4>Detailed AI Explanations</h4>
+                        <p>Every answer comes with a full AI-generated explanation — breaking down the reasoning, relevant concepts, and common mistakes so you truly understand, not just memorize.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="icon icon-indigo">
+                            <i class="fal fa-route"></i>
+                        </div>
+                        <h4>Personalized Study Plans</h4>
+                        <p>Preplok adapts to your pace. Based on your performance data, it recommends topics to focus on, sets daily study targets, and helps you build consistent exam-ready habits.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 7 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="icon icon-red">
+                            <i class="fal fa-mobile-alt"></i>
+                        </div>
+                        <h4>Mobile-First Design</h4>
+                        <p>Designed for Nigerian students on the go — study on your Android or iOS device anywhere, even with limited connectivity, with a clean and intuitive interface.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 8 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="icon icon-pink">
+                            <i class="fal fa-sliders-h"></i>
+                        </div>
+                        <h4>Adaptive Difficulty</h4>
+                        <p>Questions get smarter as you do. Our adaptive engine progressively challenges you based on your performance, ensuring you're always growing and never bored.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 9 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="icon icon-green">
+                            <i class="fal fa-graduation-cap"></i>
+                        </div>
+                        <h4>Freemium Access</h4>
+                        <p>Start for free — no credit card needed. Access mock exams and past questions at no cost, then upgrade for advanced AI features, unlimited practice, and deeper insights.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         EXAMS WE COVER
+    ═══════════════════════════════════════════════════ -->
+    <section id="exam-coverage" class="py-80" style="background:#f9f7ff;">
+        <div class="container">
+            <div class="section-heading text-center mx-auto">
+                <span class="tag">Exam Coverage</span>
+                <h2>Every major Nigerian exam, <br>fully covered</h2>
+                <p>Preplok supports the full range of national and tertiary entrance examinations Nigerian students face at key milestones in their academic journey.</p>
+            </div>
+
+            <div class="row g-3 justify-content-center mb-60">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="exam-pill text-center w-100 justify-content-center flex-column py-4">
+                        <i class="fal fa-file-alt fa-2x mb-2"></i>
+                        <span>WAEC</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="exam-pill text-center w-100 justify-content-center flex-column py-4">
+                        <i class="fal fa-university fa-2x mb-2"></i>
+                        <span>JAMB</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="exam-pill text-center w-100 justify-content-center flex-column py-4">
+                        <i class="fal fa-scroll fa-2x mb-2"></i>
+                        <span>NECO</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="exam-pill text-center w-100 justify-content-center flex-column py-4">
+                        <i class="fal fa-pencil-alt fa-2x mb-2"></i>
+                        <span>Post UTME</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="exam-pill text-center w-100 justify-content-center flex-column py-4">
+                        <i class="fal fa-certificate fa-2x mb-2"></i>
+                        <span>GCE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subjects row -->
+            <div class="text-center">
+                <h4 style="font-size:18px;font-weight:700;color:#1a1a2e;margin-bottom:20px;">Subjects Covered</h4>
+                <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+                    <span style="background:#fff;border:1px solid #e0d5ff;color:#5b21b6;padding:8px 18px;border-radius:20px;font-size:14px;font-weight:600;">Mathematics</span>
+                    <span style="background:#fff;border:1px solid #e0d5ff;color:#5b21b6;padding:8px 18px;border-radius:20px;font-size:14px;font-weight:600;">English Language</span>
+                    <span style="background:#fff;border:1px solid #e0d5ff;color:#5b21b6;padding:8px 18px;border-radius:20px;font-size:14px;font-weight:600;">Biology</span>
+                    <span style="background:#fff;border:1px solid #e0d5ff;color:#5b21b6;padding:8px 18px;border-radius:20px;font-size:14px;font-weight:600;">Chemistry</span>
+                    <span style="background:#fff;border:1px solid #e0d5ff;color:#5b21b6;padding:8px 18px;border-radius:20px;font-size:14px;font-weight:600;">Physics</span>
+                    <span style="background:#fff;border:1px solid #e0d5ff;color:#5b21b6;padding:8px 18px;border-radius:20px;font-size:14px;font-weight:600;">Economics</span>
+                    <span style="background:#fff;border:1px solid #e0d5ff;color:#5b21b6;padding:8px 18px;border-radius:20px;font-size:14px;font-weight:600;">Government</span>
+                    <span style="background:#fff;border:1px solid #e0d5ff;color:#5b21b6;padding:8px 18px;border-radius:20px;font-size:14px;font-weight:600;">Literature</span>
+                    <span style="background:#fff;border:1px solid #e0d5ff;color:#5b21b6;padding:8px 18px;border-radius:20px;font-size:14px;font-weight:600;">Commerce</span>
+                    <span style="background:#fff;border:1px solid #e0d5ff;color:#5b21b6;padding:8px 18px;border-radius:20px;font-size:14px;font-weight:600;">Geography</span>
+                    <span style="background:#fff;border:1px solid #e0d5ff;color:#5b21b6;padding:8px 18px;border-radius:20px;font-size:14px;font-weight:600;">Accounting</span>
+                    <span style="background:#fff;border:1px solid #e0d5ff;color:#5b21b6;padding:8px 18px;border-radius:20px;font-size:14px;font-weight:600;">CRS / IRS</span>
+                    <span style="background:#fff;border:1px solid #e0d5ff;color:#5b21b6;padding:8px 18px;border-radius:20px;font-size:14px;font-weight:600;">Further Maths</span>
+                    <span style="background:#fff;border:1px solid #e0d5ff;color:#5b21b6;padding:8px 18px;border-radius:20px;font-size:14px;font-weight:600;">Agricultural Science</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         STATS
+    ═══════════════════════════════════════════════════ -->
+    <section class="py-80">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-box">
+                        <div class="number">100K+</div>
+                        <div class="label">Target Active Users in Year 1</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-box" style="background:linear-gradient(135deg,#f59e0b,#d97706);">
+                        <div class="number">95%</div>
+                        <div class="label">Target AI Hint &amp; Explanation Accuracy</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-box" style="background:linear-gradient(135deg,#10b981,#059669);">
+                        <div class="number">20%+</div>
+                        <div class="label">Average Score Improvement</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-box" style="background:linear-gradient(135deg,#3b82f6,#2563eb);">
+                        <div class="number">5</div>
+                        <div class="label">Major Exams Fully Supported</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         ROADMAP
+    ═══════════════════════════════════════════════════ -->
+    <section class="py-80" style="background:#f9f7ff;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="section-heading" style="margin-bottom:36px;">
+                        <span class="tag">Future Roadmap</span>
+                        <h2>Where Preplok is headed</h2>
+                        <p>We are committed to continuous innovation — building Preplok into a comprehensive educational ecosystem for every Nigerian learner.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot dot-1"><i class="fal fa-flag"></i></div>
+                        <div class="timeline-content">
+                            <h5>Short-Term (1–2 Years)</h5>
+                            <p>Launch live tutoring via video calls, community forums for peer discussion, subject-specific video lectures, and voice-assisted AI hints for accessibility — including support for visually impaired learners.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot dot-2"><i class="fal fa-rocket"></i></div>
+                        <div class="timeline-content">
+                            <h5>Medium-Term (2–3 Years)</h5>
+                            <p>Expand to university past questions from UNILAG, UI, ABU and more. Introduce AI-driven adaptive learning paths tailored to each user's weaknesses, covering Engineering, Medicine, Law, and all major courses.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" style="margin-bottom:0;">
+                        <div class="timeline-dot dot-3"><i class="fal fa-globe-africa"></i></div>
+                        <div class="timeline-content">
+                            <h5>Long-Term (3+ Years)</h5>
+                            <p>Expand to other African exams (e.g., KCSE in Kenya), integrate VR/AR for immersive science simulations, partner with global edtech firms for certifications, and offer AI-generated custom questions with predictive analytics.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div style="background:linear-gradient(135deg,#1a1a2e,#2d1b69);border-radius:20px;padding:48px 40px;color:#fff;">
+                        <h3 style="font-size:26px;font-weight:800;margin-bottom:20px;">Our Mission</h3>
+                        <p style="font-size:15px;line-height:1.8;opacity:.85;margin-bottom:30px;">
+                            To provide affordable, engaging, and effective exam preparation tools that leverage past questions, mock simulations, and AI insights — helping students master subjects, build confidence, and achieve academic excellence.
+                        </p>
+                        <h3 style="font-size:26px;font-weight:800;margin-bottom:20px;">Our Vision</h3>
+                        <p style="font-size:15px;line-height:1.8;opacity:.85;margin-bottom:30px;">
+                            To become the leading AI-powered educational platform in Nigeria, transforming how students prepare for exams and pursue higher education — making high-quality, personalized learning accessible to everyone, regardless of location or resources.
+                        </p>
+                        <div style="background:rgba(255,255,255,.08);border-radius:12px;padding:20px 24px;">
+                            <p style="font-size:14px;opacity:.7;margin:0;font-style:italic;">
+                                "We envision a future where Preplok eliminates barriers to education, reduces failure rates in national exams, and equips a generation of confident, knowledgeable individuals ready to contribute to Nigeria's growth."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         SOCIAL IMPACT
+    ═══════════════════════════════════════════════════ -->
+    <section class="py-80">
+        <div class="container">
+            <div class="section-heading text-center mx-auto">
+                <span class="tag">Social Impact</span>
+                <h2>Education for everyone</h2>
+                <p>Preplok believes access to quality exam prep shouldn't depend on how much money your family has. We're committed to bridging the educational gap in Nigeria.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <div class="icon icon-purple mx-auto"><i class="fal fa-hand-holding-heart"></i></div>
+                        <h4>Free Basic Access</h4>
+                        <p>Every student gets free access to mock exams and past questions from day one — no barriers, no upfront cost.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <div class="icon icon-green mx-auto"><i class="fal fa-users"></i></div>
+                        <h4>NGO Partnerships</h4>
+                        <p>We partner with NGOs and government bodies to provide free premium access to underprivileged students across Nigeria.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <div class="icon icon-blue mx-auto"><i class="fal fa-map-marker-check"></i></div>
+                        <h4>Anywhere Access</h4>
+                        <p>Students in Abuja, Lagos, Kano, or rural areas all get the same quality experience — Preplok works everywhere in Nigeria.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         CTA BAND
+    ═══════════════════════════════════════════════════ -->
+    <section class="py-80" style="background:#f9f7ff;">
+        <div class="container">
+            <div class="features-cta-band">
+                <h2>Ready to ace your exams?</h2>
+                <p>Join thousands of Nigerian students already using Preplok to study smarter, score higher, and build the future they deserve.</p>
+                <div class="cta-btn-row">
+                    <a href="#" class="btn-cta-ios" onclick="openComingSoonModal(); return false;">
+                        <i class="fab fa-apple fa-lg"></i> Download for iOS
+                    </a>
+                    <a href="#" class="btn-cta-android">
+                        <i class="fab fa-google-play fa-lg"></i> Download for Android
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--====== SHARED FOOTER ======-->
+    <div id="app-footer"></div>
+    <!--====== SHARED FOOTER ENDS ======-->
+
+    <!--====== JS ======-->
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
