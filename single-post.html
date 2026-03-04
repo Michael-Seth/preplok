@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Stay updated with the latest study tips, exam guides, and success stories from Preplok — Nigeria's AI-powered exam prep platform.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--====== Title ======-->
+    <title>Blog &amp; Study Tips | Preplok - AI-Powered Exam Prep</title>
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <!--====== Animate css ======-->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="assets/css/custom-animation.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* ── WordPress API Loading/Error states ── */
+        #posts-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .blog-loading {
+            text-align: center;
+            padding: 60px 20px;
+            width: 100%;
+        }
+        .blog-loading .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #f0f0f0;
+            border-top-color: #7a5af8;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .blog-loading p { color: #888; font-size: 16px; }
+        .blog-error {
+            background: #fff5f5;
+            border: 1px solid #ffc5c5;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            width: 100%;
+            color: #c0392b;
+        }
+        .blog-error i { font-size: 40px; margin-bottom: 15px; display: block; }
+
+        /* ── Dynamic post cards ── */
+        .wp-post-card {
+            width: calc(50% - 15px);
+            flex-shrink: 0;
+        }
+        @media (max-width: 768px) {
+            .wp-post-card { width: 100%; }
+        }
+        .post-item-1 {
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #fff;
+            height: 100%;
+        }
+        .post-item-1:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(122, 90, 248, 0.15);
+        }
+        .post-item-1 .post-thumbnail {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            display: block;
+        }
+        .post-thumbnail-placeholder {
+            width: 100%;
+            height: 210px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+        }
+        .b-post-details { padding: 22px; }
+        .bp-meta a { font-size: 13px; color: #999; margin-right: 15px; }
+        .bp-meta a i { margin-right: 5px; color: #7a5af8; }
+        .b-post-details h3 {
+            margin: 10px 0 14px;
+            font-size: 17px;
+            line-height: 1.5;
+        }
+        .b-post-details h3 a { color: #222; }
+        .b-post-details h3 a:hover { color: #7a5af8; }
+        .b-post-details .post-excerpt {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .read-more {
+            font-size: 14px;
+            font-weight: 600;
+            color: #7a5af8;
+        }
+        .read-more i { margin-left: 6px; transition: transform 0.2s; }
+        .read-more:hover i { transform: translateX(4px); }
+
+        /* ── Sidebar recent posts (dynamic) ── */
+        .sidebar-loading { color: #aaa; font-size: 14px; padding: 10px 0; }
+        .popular-post { display: flex; gap: 12px; margin-bottom: 18px; align-items: flex-start; }
+        .popular-post a img {
+            width: 65px;
+            height: 55px;
+            object-fit: cover;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+        .popular-post-thumb-placeholder {
+            width: 65px;
+            height: 55px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+        .popular-post-info h5 { font-size: 14px; margin: 0 0 4px; line-height: 1.4; }
+        .popular-post-info h5 a { color: #333; }
+        .popular-post-info h5 a:hover { color: #7a5af8; }
+        .popular-post-info span { font-size: 12px; color: #aaa; }
+
+        /* ── Pagination ── */
+        .blog-pagination { margin-top: 20px; }
+        .blog-pagination .bisylms-pagination { display: flex; gap: 10px; align-items: center; }
+    </style>
+
+</head>
+
+<body>
+
+    <!--====== PRELOADER PART START ======-->
+    <div class="loader-wrap">
+        <div class="preloader"><div class="preloader-close">Preloader Close</div></div>
+        <div class="layer layer-one"><span class="overlay"></span></div>
+        <div class="layer layer-two"><span class="overlay"></span></div>
+        <div class="layer layer-three"><span class="overlay"></span></div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== OFFCANVAS MENU PART START ======-->
+    <div class="off_canvars_overlay"></div>
+    <div class="offcanvas_menu">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="offcanvas_menu_wrapper">
+                        <div class="canvas_close">
+                            <a href="javascript:void(0)"><i class="fa fa-times"></i></a>
+                        </div>
+                        <div class="offcanvas-brand text-center mb-40">
+                            <img src="assets/images/Preplok-Logo.png" alt="Preplok">
+                        </div>
+                        <div id="menu" class="text-left">
+                            <ul class="offcanvas_main_menu">
+                                <li class="menu-item-has-children active">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="menu-item-has-children active">
+                                    <a href="index.html#service">Features</a>
+                                </li>
+                                <li class="menu-item-has-children active">
+                                    <a href="index.html#features">About</a>
+                                </li>
+                                <li class="menu-item-has-children active">
+                                    <a href="#">Exams</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">WAEC</a></li>
+                                        <li><a href="#">JAMB</a></li>
+                                        <li><a href="#">NECO</a></li>
+                                        <li><a href="#">Post UTME</a></li>
+                                        <li><a href="#">GCE</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children active">
+                                    <a href="single-post.html">Blog</a>
+                                </li>
+                                <li class="menu-item-has-children active">
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="offcanvas-social">
+                            <ul class="text-center">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-widget-info">
+                            <ul>
+                                <li><a href="#"><i class="fal fa-envelope"></i> hello@preplok.com</a></li>
+                                <li><a href="#"><i class="fal fa-phone"></i> +234 (0) 913 330 3018</a></li>
+                                <li><a href="#"><i class="fal fa-map-marker-alt"></i> Abuja, Nigeria</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== OFFCANVAS MENU PART ENDS ======-->
+
+    <!--====== HEADER PART START ======-->
+    <header class="appie-header-area appie-header-page-area appie-sticky">
+        <div class="container">
+            <div class="header-nav-box header-nav-box-3 header-nav-box-inner-page">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 col-md-4 col-sm-5 col-6 order-1 order-sm-1">
+                        <div class="appie-logo-box">
+                            <a href="index.html">
+                                <img src="assets/images/Preplok-Logo.png" alt="Preplok">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-1 col-sm-1 order-3 order-sm-2">
+                        <div class="appie-header-main-menu">
+                            <ul>
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="index.html#service">Features</a>
+                                </li>
+                                <li>
+                                    <a href="#">Exams <i class="fal fa-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">WAEC</a></li>
+                                        <li><a href="#">JAMB</a></li>
+                                        <li><a href="#">NECO</a></li>
+                                        <li><a href="#">Post UTME</a></li>
+                                        <li><a href="#">GCE</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="single-post.html">Blog <i class="fal fa-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="single-post.html">All Posts</a></li>
+                                        <li><a href="#">Study Tips</a></li>
+                                        <li><a href="#">Success Stories</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-7 col-sm-6 col-6 order-2 order-sm-3">
+                        <div class="appie-btn-box text-right">
+                            <a class="main-btn ml-30" href="#">Download App</a>
+                            <div class="toggle-btn ml-30 canvas_open d-lg-none d-block">
+                                <i class="fa fa-bars"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--====== HEADER PART ENDS ======-->
+
+    <!--====== PAGE TITLE PART START ======-->
+    <div class="appie-page-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="appie-page-title-item">
+                        <h3 class="title">Study Tips &amp; Resources</h3>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PAGE TITLE PART ENDS ======-->
+
+    <!-- Blog Start -->
+    <section class="blogpage-section">
+        <div class="container">
+            <div class="row">
+                <!-- Posts Grid -->
+                <div class="col-lg-8 col-md-7">
+                    <div id="posts-container">
+                        <!-- Loading state -->
+                        <div class="blog-loading" id="posts-loading">
+                            <div class="spinner"></div>
+                            <p>Fetching the latest posts from Preplok...</p>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="blog-pagination" id="blog-pagination" style="display:none;">
+                        <div class="bisylms-pagination">
+                            <button id="btn-prev" class="prev" onclick="changePage(-1)" style="display:none;">
+                                <i class="fal fa-arrow-left"></i> prev
+                            </button>
+                            <span id="page-indicator" class="current">01</span>
+                            <button id="btn-next" class="next" onclick="changePage(1)">
+                                next <i class="fal fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4 col-md-5">
+                    <div class="blog-sidebar">
+
+                        <!-- Search -->
+                        <aside class="widget widget-search">
+                            <form class="search-form" id="blog-search-form" onsubmit="handleSearch(event)">
+                                <input type="search" id="blog-search-input" placeholder="Search posts...">
+                                <button type="submit"><i class="fal fa-search"></i></button>
+                            </form>
+                        </aside>
+
+                        <!-- Exam Categories -->
+                        <aside class="widget widget-categories">
+                            <h3 class="widget-title">Exam Categories</h3>
+                            <ul>
+                                <li><a href="#" onclick="filterBySearch('WAEC')">WAEC</a><span></span></li>
+                                <li><a href="#" onclick="filterBySearch('JAMB')">JAMB</a><span></span></li>
+                                <li><a href="#" onclick="filterBySearch('NECO')">NECO</a><span></span></li>
+                                <li><a href="#" onclick="filterBySearch('Post UTME')">Post UTME</a><span></span></li>
+                                <li><a href="#" onclick="filterBySearch('GCE')">GCE</a><span></span></li>
+                                <li><a href="#" onclick="filterBySearch('study tips')">Study Tips</a><span></span></li>
+                                <li><a href="#" onclick="filterBySearch('')">All Posts</a><span></span></li>
+                            </ul>
+                        </aside>
+
+                        <!-- Recent Posts (dynamic) -->
+                        <aside class="widget widget-trend-post">
+                            <h3 class="widget-title">Recent Posts</h3>
+                            <div id="recent-posts-container">
+                                <p class="sidebar-loading">Loading recent posts...</p>
+                            </div>
+                        </aside>
+
+                        <!-- Popular Tags -->
+                        <aside class="widget">
+                            <h3 class="widget-title">Popular Tags</h3>
+                            <div class="tags">
+                                <a href="#" onclick="filterBySearch('WAEC')">WAEC</a>
+                                <a href="#" onclick="filterBySearch('JAMB')">JAMB</a>
+                                <a href="#" onclick="filterBySearch('NECO')">NECO</a>
+                                <a href="#" onclick="filterBySearch('exam tips')">Exam Tips</a>
+                                <a href="#" onclick="filterBySearch('study')">Study</a>
+                                <a href="#" onclick="filterBySearch('AI')">AI Learning</a>
+                                <a href="#" onclick="filterBySearch('university')">University</a>
+                                <a href="#" onclick="filterBySearch('mathematics')">Mathematics</a>
+                                <a href="#" onclick="filterBySearch('English')">English</a>
+                            </div>
+                        </aside>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog End -->
+
+    <!--====== FOOTER PART START ======-->
+    <section class="appie-footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-about-widget footer-about-widget-5">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/logo-5.png" alt="Preplok"></a>
+                        </div>
+                        <p>Preplok is the AI-powered exam preparation app helping Nigerian students excel in WAEC, JAMB, NECO, and Post UTME.</p>
+                        <a href="index.html">Learn More <i class="fal fa-arrow-right"></i></a>
+                        <div class="social mt-30">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-navigation footer-navigation-5">
+                        <h4 class="title">Features</h4>
+                        <ul>
+                            <li><a href="#">AI-Powered Hints</a></li>
+                            <li><a href="#">Past Questions</a></li>
+                            <li><a href="#">Mock Exams</a></li>
+                            <li><a href="#">Performance Analytics</a></li>
+                            <li><a href="#">Study Plans</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-navigation footer-navigation-5">
+                        <h4 class="title">Exams</h4>
+                        <ul>
+                            <li><a href="#">WAEC</a></li>
+                            <li><a href="#">JAMB</a></li>
+                            <li><a href="#">NECO</a></li>
+                            <li><a href="#">Post UTME</a></li>
+                            <li><a href="#">GCE</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget-info">
+                        <h4 class="title">Contact Us</h4>
+                        <ul>
+                            <li><a href="#"><i class="fal fa-envelope"></i> hello@preplok.com</a></li>
+                            <li><a href="#"><i class="fal fa-phone"></i> +234 (0) 913 330 3018</a></li>
+                            <li><a href="#"><i class="fal fa-map-marker-alt"></i> Abuja, Nigeria</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-copyright d-flex align-items-center justify-content-between pt-35">
+                        <div class="apps-download-btn">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-apple"></i> Download for iOS</a></li>
+                                <li><a class="item-2" href="#"><i class="fab fa-google-play"></i> Download for Android</a></li>
+                            </ul>
+                        </div>
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2024 Preplok. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+
+    <!--====== BACK TO TOP ======-->
+    <div class="back-to-top">
+        <a href="#"><i class="fal fa-arrow-up"></i></a>
+    </div>
+
+    <!--====== JS FILES ======-->
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!--====== WordPress REST API Integration ======-->
+    <script>
+        const WP_API_BASE = 'https://preplok.com/wp-json/wp/v2';
+        const POSTS_PER_PAGE = 6;
+
+        let currentPage = 1;
+        let totalPages  = 1;
+        let currentSearch = '';
+
+        // ── Utility: strip HTML tags from WP rendered content ──
+        function stripHtml(html) {
+            const tmp = document.createElement('div');
+            tmp.innerHTML = html;
+            return tmp.textContent || tmp.innerText || '';
+        }
+
+        // ── Utility: format a WP date string ──
+        function formatDate(dateStr) {
+            const d = new Date(dateStr);
+            return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+        }
+
+        // ── Build a post card HTML string ──
+        function buildPostCard(post) {
+            const title      = post.title.rendered;
+            const excerpt    = stripHtml(post.excerpt ? post.excerpt.rendered : '').slice(0, 150) + '…';
+            const date       = formatDate(post.date);
+            const comments   = post.comment_count !== undefined ? post.comment_count : 0;
+            const detailUrl  = `single-news.html?id=${post.id}`;
+            const featImg    = post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0]
+                ? post._embedded['wp:featuredmedia'][0].source_url
+                : null;
+
+            const imgHtml = featImg
+                ? `<img class="post-thumbnail" src="${featImg}" alt="${title}">`
+                : `<div class="post-thumbnail-placeholder"><i class="fal fa-book-open"></i></div>`;
+
+            return `
+                <div class="wp-post-card">
+                    <div class="post-item-1">
+                        <a href="${detailUrl}">${imgHtml}</a>
+                        <div class="b-post-details">
+                            <div class="bp-meta">
+                                <a href="#"><i class="fal fa-clock"></i>${date}</a>
+                                <a href="#"><i class="fal fa-comments"></i>${comments} Comments</a>
+                            </div>
+                            <h3><a href="${detailUrl}">${title}</a></h3>
+                            <p class="post-excerpt">${excerpt}</p>
+                            <a class="read-more" href="${detailUrl}">Read More <i class="fal fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>`;
+        }
+
+        // ── Fetch and render posts ──
+        async function fetchPosts(page = 1, search = '') {
+            const container = document.getElementById('posts-container');
+            const pagination = document.getElementById('blog-pagination');
+
+            container.innerHTML = `
+                <div class="blog-loading" id="posts-loading">
+                    <div class="spinner"></div>
+                    <p>Fetching the latest posts from Preplok...</p>
+                </div>`;
+            pagination.style.display = 'none';
+
+            let url = `${WP_API_BASE}/posts?per_page=${POSTS_PER_PAGE}&page=${page}&_embed&orderby=date&order=desc`;
+            if (search) url += `&search=${encodeURIComponent(search)}`;
+
+            try {
+                const res = await fetch(url);
+
+                if (!res.ok && res.status !== 400) {
+                    throw new Error(`HTTP ${res.status}`);
+                }
+
+                totalPages = parseInt(res.headers.get('X-WP-TotalPages') || '1', 10);
+                const posts = await res.json();
+
+                if (!posts.length) {
+                    container.innerHTML = `
+                        <div class="blog-error">
+                            <i class="fal fa-search"></i>
+                            <strong>No posts found</strong>
+                            <p>${search ? `No results for "<em>${search}</em>". Try a different keyword.` : 'No blog posts have been published yet. Check back soon!'}</p>
+                        </div>`;
+                    return;
+                }
+
+                container.innerHTML = posts.map(buildPostCard).join('');
+                currentPage = page;
+
+                // Pagination
+                pagination.style.display = 'block';
+                document.getElementById('page-indicator').textContent = String(page).padStart(2, '0');
+                document.getElementById('btn-prev').style.display = page > 1 ? 'inline-block' : 'none';
+                document.getElementById('btn-next').style.display = page < totalPages ? 'inline-block' : 'none';
+
+            } catch (err) {
+                container.innerHTML = `
+                    <div class="blog-error">
+                        <i class="fal fa-exclamation-circle"></i>
+                        <strong>Could not load posts</strong>
+                        <p>We're having trouble connecting to the Preplok blog. Please check your internet connection or try again later.</p>
+                        <small style="color:#aaa;">Error: ${err.message}</small>
+                    </div>`;
+            }
+        }
+
+        // ── Fetch and render recent posts in sidebar ──
+        async function fetchRecentPosts() {
+            const container = document.getElementById('recent-posts-container');
+            try {
+                const res   = await fetch(`${WP_API_BASE}/posts?per_page=4&_embed&orderby=date&order=desc`);
+                const posts = await res.json();
+
+                if (!posts.length) {
+                    container.innerHTML = '<p class="sidebar-loading">No recent posts yet.</p>';
+                    return;
+                }
+
+                container.innerHTML = posts.map(post => {
+                    const title     = post.title.rendered;
+                    const date      = formatDate(post.date);
+                    const detailUrl = `single-news.html?id=${post.id}`;
+                    const featImg   = post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0]
+                        ? post._embedded['wp:featuredmedia'][0].source_url
+                        : null;
+
+                    const imgHtml = featImg
+                        ? `<a href="${detailUrl}"><img src="${featImg}" alt="${title}"></a>`
+                        : `<a href="${detailUrl}"><div class="popular-post-thumb-placeholder"><i class="fal fa-book"></i></div></a>`;
+
+                    return `
+                        <div class="popular-post">
+                            ${imgHtml}
+                            <div class="popular-post-info">
+                                <h5><a href="${detailUrl}">${title}</a></h5>
+                                <span>${date}</span>
+                            </div>
+                        </div>`;
+                }).join('');
+
+            } catch (err) {
+                container.innerHTML = '<p class="sidebar-loading">Could not load recent posts.</p>';
+            }
+        }
+
+        // ── Pagination ──
+        function changePage(direction) {
+            const next = currentPage + direction;
+            if (next < 1 || next > totalPages) return;
+            fetchPosts(next, currentSearch);
+            window.scrollTo({ top: 400, behavior: 'smooth' });
+        }
+
+        // ── Search ──
+        function handleSearch(e) {
+            e.preventDefault();
+            const q = document.getElementById('blog-search-input').value.trim();
+            currentSearch = q;
+            fetchPosts(1, q);
+        }
+
+        function filterBySearch(term) {
+            event.preventDefault();
+            currentSearch = term;
+            document.getElementById('blog-search-input').value = term;
+            fetchPosts(1, term);
+            window.scrollTo({ top: 400, behavior: 'smooth' });
+        }
+
+        // ── Init ──
+        fetchPosts(1);
+        fetchRecentPosts();
+    </script>
+
+</body>
+</html>

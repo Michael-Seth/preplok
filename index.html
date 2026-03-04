@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en">
+<head>
+   
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!--====== Title ======-->
+    <title>Preplok - AI-Powered Exam Preparation for Nigerian Students</title>
+    
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="assets/css/custom-animation.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .coming-soon-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.3s ease;
+        }
+        .coming-soon-content {
+            position: relative;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 10% auto;
+            padding: 50px 40px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideDown 0.4s ease;
+        }
+        .coming-soon-close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+            background: none;
+            border: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        .coming-soon-close:hover {
+            opacity: 1;
+        }
+        .coming-soon-icon {
+            font-size: 80px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .coming-soon-content h2 {
+            color: #fff;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .coming-soon-content p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .coming-soon-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #fff;
+            color: #667eea;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .coming-soon-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            color: #667eea;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+  
+</head>
+
+<body>    
+
+
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="loader-wrap">
+        <div class="preloader"><div class="preloader-close">Preloader Close</div></div>
+        <div class="layer layer-one"><span class="overlay"></span></div>
+        <div class="layer layer-two"><span class="overlay"></span></div>        
+        <div class="layer layer-three"><span class="overlay"></span></div>        
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== OFFCANVAS MENU PART START ======-->
+
+    <div class="off_canvars_overlay">
+                
+    </div>
+    <div class="offcanvas_menu">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="offcanvas_menu_wrapper">
+                        <div class="canvas_close">
+                            <a href="javascript:void(0)"><i class="fa fa-times"></i></a>  
+                        </div>
+                        <div class="offcanvas-brand text-center mb-40">
+                            <img src="assets/images/logo.png" alt="">
+                        </div>
+                        <div id="menu" class="text-left ">
+                            <ul class="offcanvas_main_menu">
+                                <li class="menu-item-has-children active">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="menu-item-has-children active">
+                                    <a href="#service">Features</a>
+                                </li>
+                                <li class="menu-item-has-children active">
+                                    <a href="#features">About</a>
+                                </li>
+                                <li class="menu-item-has-children active">
+                                    <a href="#testimonial">Success Stories</a>
+                                </li>
+                                <li class="menu-item-has-children active">
+                                    <a href="#">Exams</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html">WAEC</a></li>
+                                        <li><a href="index-2.html">JAMB</a></li>
+                                        <li><a href="index-3.html">NECO</a></li>
+                                        <li><a href="index-4.html">Post UTME</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children active">
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="offcanvas-social">
+                            <ul class="text-center">
+                                <li><a href="%24.html"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="%24.html"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="%24.html"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="%24.html"><i class="fab fa-tiktok"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-widget-info">
+                            <ul>
+                                <li><a href="#"><i class="fal fa-envelope"></i> <span class="__cf_email__" data-cfemail="1e6d6b6e6e716c6a5e7f6e6e777b307d7173">hello@preplok.com</span></a></li>
+                                <li><a href="#"><i class="fal fa-phone"></i> +234 (0) 913 330 3018</a></li>
+                                <li><a href="#"><i class="fal fa-map-marker-alt"></i> Abuja, Nigeria</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== OFFCANVAS MENU PART ENDS ======-->
+
+    <!--====== SEARCH PART START ======-->
+
+    <div class="search-box">
+        <div class="search-header">
+            <div class="container mt-60">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="search-title"><img src="assets/images/logo-7.png" alt=""></h5> <!-- search title -->
+                    </div>
+                    <div class="col-6">
+                        <div class="search-close text-right">
+                            <button class="search-close-btn">Close <span></span><span></span></button>
+                        </div> <!-- search close -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- search header -->
+        <div class="search-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="search-form">
+                            <form action="#">
+                                <input type="text" placeholder="Search for Products">
+                                <button><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- search body -->
+    </div>
+
+    <!--====== SEARCH PART ENDS ======-->
+
+    <!--====== SHOPPING CART PART START ======-->
+
+    <div class="amm-shopping-cart-wrapper">
+        <div class="amm-shopping-cart-canvas">
+            <div class="amm-shopping_cart">
+                <div class="amm-shopping_cart-top-bar d-flex justify-content-between">
+                    <h6>Shopping Cart</h6>
+                    <button class="amm-shopping-cart-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div><!-- shopping cart top bar -->
+                <div class="amm-shopping_cart-list-items mt-30">
+                    <ul>
+                        <li>
+                            <div class="amm-single-shopping-cart media">
+                                <div class="cart-image">
+                                    <img src="assets/images/cart-1.jpg" alt="Cart">
+                                </div>
+                                <div class="cart-content media-body pl-15">
+                                    <h6><a href="#">Banana</a></h6>
+                                    <span class="quality">QTY: 01</span>
+                                    <span class="price">$205.00</span>
+                                    <a class="remove" href="#"><i class="fa fa-times"></i></a>
+                                </div>
+                            </div> <!-- single shopping cart -->
+                        </li>
+                        <li>
+                            <div class="amm-single-shopping-cart media">
+                                <div class="cart-image">
+                                    <img src="assets/images/cart-2.jpg" alt="Cart">
+                                </div>
+                                <div class="cart-content media-body pl-15">
+                                    <h6><a href="#">Grape</a></h6>
+                                    <span class="quality">QTY: 01</span>
+                                    <span class="price-discount">$205.00</span>
+                                    <span class="price-close">$205.00</span>
+                                    <a class="remove" href="#"><i class="fa fa-times"></i></a>
+                                </div>
+                            </div> <!-- single shopping cart -->
+                        </li>
+                    </ul>
+                </div> <!-- shopping_cart list items -->
+                <div class="amm-shopping_cart-btn">
+                    <div class="total pt-35 d-flex justify-content-between">
+                        <h5>Subtotal:</h5>
+                        <p>$240.00</p>
+                    </div>
+                    <div class="cart-btn pt-25">
+                        <a class="main-btn" href="#">View Cart</a>
+                        <a class="main-btn main-btn-2" href="#">Checkout</a>
+                    </div>
+                </div>
+            </div> <!-- shopping_cart -->
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+    <!--====== SHOPPING CART PART ENDS ======-->
+   
+    <!--====== PART START ======-->
+    
+    <header class="appie-header-area appie-sticky">
+        <div class="container">
+            <div class="header-nav-box header-nav-4-box">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 col-md-4 col-sm-5 col-6 order-1 order-sm-1">
+                        <div class="appie-logo-box">
+                            <a href="#">
+                                <img src="assets/images/Preplok-Logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-1 col-sm-1 order-3 order-sm-2">
+                        <div class="appie-header-main-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">Home <i class="fal fa-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="index-2.html">About Preplok</a></li>
+                                        <li><a href="index-3.html">Features</a></li>
+                                        <li><a href="index-4.html">Success Stories</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="service-details.html">Features</a>
+                                </li>
+                                <li> 
+                                    <a href="#">Exams  <i class="fal fa-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="about-us.html">WAEC</a></li>
+                                        <li><a href="about-us-2.html">JAMB</a></li>
+                                        <li><a href="error.html">NECO</a></li>
+                                        <li><a href="shop.html">Post UTME</a></li>
+                                        <li><a href="shop-details.html">GCE</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Resources <i class="fal fa-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="news.html">Study Tips</a></li>
+                                        <li><a href="single-news.html">Success Stories</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4  col-md-7 col-sm-6 col-6 order-2 order-sm-3">
+                        <div class="appie-btn-box text-right">
+                            <ul>
+                                <li><a class="search-open" href="#"><i class="fal fa-search"></i></a></li>
+                            </ul>
+                            <div class="toggle-btn ml-30 canvas_open d-lg-none d-block">
+                                <i class="fa fa-bars"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!--====== PART ENDS ======-->
+
+    <!--====== APPIE HERO PART START ======-->
+    
+    <section class="appie-hero-area appie-hero-4-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="appie-hero-content appie-hero-content-4">
+                        <span>Free Trial Available</span>
+                        <h1 class="appie-title">Master Your Exams with Preplok</h1>
+                        <p>AI-powered exam preparation for Nigerian students. Access thousands of past questions for WAEC, JAMB, NECO, and Post UTME with intelligent hints and detailed explanations.</p>
+                        <a class="main-btn" href="#">Let’s Talk</a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="appie-hero-thumb appie-hero-thumb-4">
+                        <img src="assets/images/hero-thumb-5.png" alt="">
+                        <div class="hero-dot">
+                            <img src="assets/images/hero-dot.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-shape-1">
+            <img src="assets/images/shape/shape-10.png" alt="">
+        </div>
+    </section>
+    
+    <!--====== APPIE HERO PART ENDS ======-->
+
+    <!--====== APPIE SERVICES PART START ======-->
+    
+    <section class="appie-service-area appie-service-3-area pt-90 pb-100" id="service">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="appie-section-title text-center">
+                        <h3 class="appie-title">Why Choose Preplok?</h3>
+                        <p>Comprehensive exam preparation tools designed specifically for Nigerian students.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="appie-single-service appie-single-services-3 text-center mt-30 wow animated fadeInUp" data-wow-duration="2000ms" data-wow-delay="200ms">
+                        <div class="icon">
+                            <img src="assets/images/icon/1.png" alt="">
+                        </div>
+                        <h4 class="appie-title">AI-Powered Hints</h4>
+                        <p>Get intelligent hints for every question to guide your thinking process.</p>
+                        <a href="#">Read More <i class="fal fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="appie-single-service appie-single-services-3 text-center mt-30 item-2 wow animated fadeInUp" data-wow-duration="2000ms" data-wow-delay="400ms">
+                        <div class="icon">
+                            <img src="assets/images/icon/2.png" alt="">
+                        </div>
+                        <h4 class="appie-title">Past Questions Bank</h4>
+                        <p>Access thousands of past questions from WAEC, JAMB, NECO, and more.</p>
+                        <a href="#">Read More <i class="fal fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="appie-single-service appie-single-services-3 text-center mt-30 item-3 wow animated fadeInUp" data-wow-duration="2000ms" data-wow-delay="600ms">
+                        <div class="icon">
+                            <img src="assets/images/icon/3.png" alt="">
+                        </div>
+                        <h4 class="appie-title">Mock Exams</h4>
+                        <p>Practice with timed mock exams that simulate real exam conditions.</p>
+                        <a href="#">Read More <i class="fal fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="appie-single-service appie-single-services-3 text-center mt-30 item-4 wow animated fadeInUp" data-wow-duration="2000ms" data-wow-delay="800ms">
+                        <div class="icon">
+                            <img src="assets/images/icon/4.png" alt="">
+                        </div>
+                        <h4 class="appie-title">Performance Analytics</h4>
+                        <p>Track your progress with detailed analytics and performance insights.</p>
+                        <a href="#">Read More <i class="fal fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--====== APPIE SERVICES PART ENDS ======-->
+
+    <!--====== APPIE FEATURES 2 PART START ======-->
+    
+    <section class="appie-features-area-2 pt-90 pb-100" id="features">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="appie-section-title appie-section-title-2 text-center">
+                        <h3 class="appie-title">Built for Nigerian <br> Students</h3>
+                        <p>Tailored specifically for Nigerian curricula and examination systems.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-30 align-items-center">
+                <div class="col-lg-6">
+                    <div class="appie-features-boxes">
+                        <div class="appie-features-box-item">
+                            <h4 class="title">WAEC & JAMB Ready</h4>
+                            <p>Comprehensive coverage of all WAEC and JAMB subjects and topics.</p>
+                        </div>
+                        <div class="appie-features-box-item item-2">
+                            <h4 class="title">Smart Learning Path</h4>
+                            <p>AI-driven personalized study plans based on your performance.</p>
+                        </div>
+                        <div class="appie-features-box-item item-3">
+                            <h4 class="title">Offline Access</h4>
+                            <p>Download questions and study materials for offline practice.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="appie-features-thumb wow animated fadeInRight" data-wow-duration="2000ms" data-wow-delay="200ms">
+                        <img src="assets/images/Prelok-2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="features-shape-1">
+            <img src="assets/images/shape/shape-15.png" alt="">
+        </div>
+        <div class="features-shape-2">
+            <img src="assets/images/shape/shape-14.png" alt="">
+        </div>
+        <div class="features-shape-3">
+            <img src="assets/images/shape/shape-13.png" alt="">
+        </div>
+    </section>
+    
+    <!--====== APPIE FEATURES 2 PART ENDS ======-->
+
+    <!--====== APPIE DOWNLOAD 3 PART START ======-->
+    
+    <section class="appie-download-3-area pt-90 pb-90" id="download">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="appie-section-title text-center">
+                        <h3 class="appie-title">Get Preplok Today!</h3>
+                        <p>Start your exam preparation journey with Preplok — it's free to get started.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="appie-download-3-box appie-download-5-box mt-30 mr-20 wow animated fadeInLeft" data-wow-duration="2000ms" data-wow-delay="200ms">
+                        <div class="content">
+                            <h4 class="title">Android</h4>
+                            <p>Get Preplok for Android and start practicing with thousands of past questions.</p>
+                            <a class="main-btn" href="#"><i class="fab fa-google-play"></i>Download for Android</a>
+                        </div>
+                        <div class="thumb text-center">
+                            <img src="assets/images/download-thumb-1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="appie-download-3-box appie-download-5-box mt-30 ml-20 wow animated fadeInRight" data-wow-duration="2000ms" data-wow-delay="400ms">
+                        <div class="content">
+                            <h4 class="title">iOS & iPadOS</h4>
+                            <p>Get Preplok for iOS and access AI-powered study tools on your iPhone or iPad.</p>
+                            <a class="main-btn main-btn-2" href="#" onclick="openComingSoonModal(); return false;"><i class="fab fa-apple"></i>Download for iOS</a>
+                        </div>
+                        <div class="thumb text-right">
+                            <img src="assets/images/download-thumb-2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--====== APPIE DOWNLOAD 3 PART ENDS ======-->
+
+    <!--====== APPIE SHOWCASE PART START ======-->
+    
+    <section class="appie-showcase-area ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="appie-section-title text-center">
+                        <h3 class="appie-title">Preplok in Action</h3>
+                        <p>See how Preplok helps students excel in their exams with smart features.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row appie-showcase-slider">
+                <div class="col-lg-3">
+                    <div class="appie-showcase-item mt-30">
+                        <a class="appie-image-popup" href="assets/images/showcase-1.png"><img src="assets/images/showcase-1.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="appie-showcase-item mt-30">
+                        <a class="appie-image-popup" href="assets/images/showcase-2.png"><img src="assets/images/showcase-2.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="appie-showcase-item mt-30">
+                        <a class="appie-image-popup" href="assets/images/showcase-3.png"><img src="assets/images/showcase-3.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="appie-showcase-item mt-30">
+                        <a class="appie-image-popup" href="assets/images/showcase-4.png"><img src="assets/images/showcase-4.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="appie-showcase-item mt-30">
+                        <a class="appie-image-popup" href="assets/images/showcase-2.png"><img src="assets/images/showcase-2.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="showcase-shape-1">
+            <img src="assets/images/shape/shape-14.png" alt="">
+        </div>
+        <div class="showcase-shape-2">
+            <img src="assets/images/shape/shape-13.png" alt="">
+        </div>
+        <div class="showcase-shape-3">
+            <img src="assets/images/shape/shape-12.png" alt="">
+        </div>
+        <div class="showcase-shape-4">
+            <img src="assets/images/shape/shape-15.png" alt="">
+        </div>
+    </section>
+    
+    <!--====== APPIE SHOWCASE PART ENDS ======-->
+
+    <!--====== APPIE TESTIMONIAL PART START ======-->
+    
+    <section class="appie-testimonial-area pt-100 pb-160" id="testimonial">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="appie-testimonial-slider">
+                        <div class="appie-testimonial-item text-center">
+                            <div class="author-info">
+                                <img src="assets/images/testimonial-user.png" alt="">
+                                <h5 class="title">Adebayo Ogundimu</h5>
+                                <span>JAMB 2024 Candidate</span>
+                            </div>
+                            <div class="text">
+                                <p>Preplok helped me improve my JAMB score from 180 to 280! The AI hints made difficult questions much easier to understand. I'm now studying Computer Science at University of Lagos.</p>
+                                <ul>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="appie-testimonial-item text-center">
+                            <div class="author-info">
+                                <img src="assets/images/testimonial-user.png" alt="">
+                                <h5 class="title">Fatima Ibrahim</h5>
+                                <span>WAEC 2024 Graduate</span>
+                            </div>
+                            <div class="text">
+                                <p>The mock exams on Preplok were exactly like the real WAEC. I practiced every day and got A1 in Mathematics and English. Thank you Preplok for making my dreams come true!</p>
+                                <ul>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="appie-testimonial-item text-center">
+                            <div class="author-info">
+                                <img src="assets/images/testimonial-user.png" alt="">
+                                <h5 class="title">Chinedu Okoro</h5>
+                                <span>Post UTME Success</span>
+                            </div>
+                            <div class="text">
+                                <p>Preplok's Post UTME section was a game changer. The detailed explanations helped me understand concepts I struggled with for months. I scored 85% and got admission to study Medicine!</p>
+                                <ul>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--====== APPIE TESTIMONIAL PART ENDS ======-->
+
+    <!--====== APPIE SPONSER PART START ======-->
+    
+    <section class="appie-sponser-area pt-90 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="appie-section-title text-center">
+                        <h3 class="appie-title">Trusted by Students <br> Across Nigeria</h3>
+                        <p>Join over 100,000 students who have improved their exam scores with Preplok.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="appie-sponser-box d-flex justify-content-center">
+                        <div class="sponser-item">
+                            <img src="assets/images/sponser-1.png" alt="">
+                        </div>
+                        <div class="sponser-item">
+                            <img src="assets/images/sponser-2.png" alt="">
+                        </div>
+                        <div class="sponser-item">
+                            <img src="assets/images/sponser-3.png" alt="">
+                        </div>
+                        <div class="sponser-item">
+                            <img src="assets/images/sponser-4.png" alt="">
+                        </div>
+                        <div class="sponser-item">
+                            <img src="assets/images/sponser-5.png" alt="">
+                        </div>
+                        <div class="sponser-item">
+                            <img src="assets/images/sponser-6.png" alt="">
+                        </div>
+                    </div>
+                    <div class="appie-sponser-box item-2 d-flex justify-content-center">
+                        <div class="sponser-item">
+                            <img src="assets/images/sponser-7.png" alt="">
+                        </div>
+                        <div class="sponser-item">
+                            <img src="assets/images/sponser-8.png" alt="">
+                        </div>
+                        <div class="sponser-item">
+                            <img src="assets/images/sponser-9.png" alt="">
+                        </div>
+                        <div class="sponser-item">
+                            <img src="assets/images/sponser-10.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sponser-shape">
+            <img src="assets/images/sponser-shape.png" alt="">
+        </div>
+    </section>
+    
+    <!--====== APPIE SPONSER PART ENDS ======-->
+
+    <!--====== APPIE FOOTER PART START ======-->
+    
+    <section class="appie-footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-about-widget footer-about-widget-5">
+                        <div class="logo">
+                            <a href="#"><img src="assets/images/logo-5.png" alt=""></a>
+                        </div>
+                        <p>Preplok is the AI-powered exam preparation app that helps Nigerian students excel in WAEC, JAMB, NECO, and Post UTME.</p>
+                        <a href="#">Learn More <i class="fal fa-arrow-right"></i></a>
+                        <div class="social mt-30">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-navigation footer-navigation-5">
+                        <h4 class="title">Features</h4>
+                        <ul>
+                            <li><a href="#">AI-Powered Hints</a></li>
+                            <li><a href="#">Past Questions</a></li>
+                            <li><a href="#">Mock Exams</a></li>
+                            <li><a href="#">Performance Analytics</a></li>
+                            <li><a href="#">Study Plans</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-navigation footer-navigation-5">
+                        <h4 class="title">Exams</h4>
+                        <ul>
+                            <li><a href="#">WAEC</a></li>
+                            <li><a href="#">JAMB</a></li>
+                            <li><a href="#">NECO</a></li>
+                            <li><a href="#">Post UTME</a></li>
+                            <li><a href="#">GCE</a></li>
+                        </ul>
+                    </div>                    
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget-info">
+                        <h4 class="title">Contact Us</h4>
+                        <ul>
+                            <li><a href="#"><i class="fal fa-envelope"></i> <span class="__cf_email__" data-cfemail="2c5f595c5c435e586c4d5c5c4549024f4341">hello@preplok.com</span></a></li>
+                            <li><a href="#"><i class="fal fa-phone"></i> +234 (0) 913 330 3018</a></li>
+                            <li><a href="#"><i class="fal fa-map-marker-alt"></i> Abuja, Nigeria</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-copyright d-flex align-items-center justify-content-between pt-35">
+                        <div class="apps-download-btn">
+                        <ul>
+                            <li><a href="#" onclick="openComingSoonModal(); return false;"><i class="fab fa-apple"></i> Download for iOS</a></li>
+                            <li><a class="item-2" href="#"><i class="fab fa-google-play"></i> Download for Android</a></li>
+                        </ul>
+                        </div>
+                        <div class="copyright-text">
+                            <p>Copyright © 2024 Preplok. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--====== APPIE FOOTER PART ENDS ======-->
+
+
+    <!--====== APPIE BACK TO TOP PART ENDS ======-->
+    <div class="back-to-top back-to-top-5">
+        <a href="#"><i class="fal fa-arrow-up"></i></a>
+    </div>
+    <!--====== APPIE BACK TO TOP PART ENDS ======-->
+
+    <!--====== COMING SOON MODAL ======-->
+    <div id="comingSoonModal" class="coming-soon-modal">
+        <div class="coming-soon-content">
+            <button class="coming-soon-close" onclick="closeComingSoonModal()">&times;</button>
+            <div class="coming-soon-icon">
+                <i class="fab fa-apple"></i>
+            </div>
+            <h2>Coming Soon!</h2>
+            <p>Our iOS app is currently in development. We're working hard to bring Preplok to the App Store soon. Stay tuned!</p>
+            <a href="#" class="coming-soon-btn" onclick="closeComingSoonModal(); return false;">Got it!</a>
+        </div>
+    </div>
+    <!--====== COMING SOON MODAL ENDS ======-->
+
+    
+    
+    
+    
+    
+    <!--====== jquery js ======-->
+    <script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    
+    <!--====== wow js ======-->
+    <script src="assets/js/wow.js"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+
+    <!--====== TweenMax js ======-->
+    <script src="assets/js/TweenMax.min.js"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick.min.js"></script>
+    
+    <!--====== Magnific Popup js ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        function openComingSoonModal() {
+            document.getElementById('comingSoonModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeComingSoonModal() {
+            document.getElementById('comingSoonModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        window.onclick = function(event) {
+            var modal = document.getElementById('comingSoonModal');
+            if (event.target == modal) {
+                closeComingSoonModal();
+            }
+        }
+    </script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"05c60afabf3e4b64ba091c1c292eafc9","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
