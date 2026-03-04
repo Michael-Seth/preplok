@@ -1,439 +1,100 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-
-    <!--====== Required meta tags ======-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="" id="meta-description">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!--====== Open Graph ======-->
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Preplok">
     <meta property="og:title" content="" id="og-title">
     <meta property="og:description" content="" id="og-description">
     <meta property="og:image" content="" id="og-image">
-
-    <!--====== Title ======-->
     <title id="page-title">Blog | Preplok - AI-Powered Exam Prep</title>
-
-    <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
-
-    <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <!--====== Fontawesome css ======-->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-    <!--====== Animate css ======-->
     <link rel="stylesheet" href="assets/css/animate.min.css">
-
-    <!--====== Magnific Popup css ======-->
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
-
-    <!--====== Slick css ======-->
     <link rel="stylesheet" href="assets/css/slick.css">
-
-    <!--====== Default css ======-->
     <link rel="stylesheet" href="assets/css/custom-animation.css">
     <link rel="stylesheet" href="assets/css/default.css">
-
-    <!--====== Style css ======-->
     <link rel="stylesheet" href="assets/css/style.css">
-
     <style>
-        /* ── Loading & Error States ── */
-        .post-loading {
-            text-align: center;
-            padding: 80px 20px;
-        }
+        .post-loading { text-align: center; padding: 80px 20px; }
         .post-loading .spinner {
-            width: 55px;
-            height: 55px;
-            border: 4px solid #f0f0f0;
-            border-top-color: #7a5af8;
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-            margin: 0 auto 20px;
+            width: 55px; height: 55px; border: 4px solid #f0f0f0;
+            border-top-color: #7a5af8; border-radius: 50%;
+            animation: spin 0.8s linear infinite; margin: 0 auto 20px;
         }
         @keyframes spin { to { transform: rotate(360deg); } }
         .post-loading p { color: #888; font-size: 16px; }
-        .post-error {
-            background: #fff5f5;
-            border: 1px solid #ffc5c5;
-            border-radius: 12px;
-            padding: 40px;
-            text-align: center;
-            color: #c0392b;
-        }
-        .post-error i { font-size: 48px; margin-bottom: 15px; display: block; }
-        .post-error a { color: #7a5af8; text-decoration: underline; }
-
-        /* ── Hero Featured Image ── */
-        .post-featured-image {
-            width: 100%;
-            max-height: 440px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 32px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-        }
-        .post-featured-placeholder {
-            width: 100%;
-            height: 280px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 70px;
-            margin-bottom: 32px;
-        }
-
-        /* ── Post Meta ── */
-        .post-meta-bar {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-bottom: 24px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        .post-meta-bar span {
-            font-size: 14px;
-            color: #888;
-        }
-        .post-meta-bar span i {
-            color: #7a5af8;
-            margin-right: 6px;
-        }
-        .post-meta-bar .author-name {
-            font-weight: 600;
-            color: #444;
-        }
-
-        /* ── Post Title ── */
-        .post-main-title {
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 1.35;
-            color: #1a1a2e;
-            margin-bottom: 28px;
-        }
-        @media (max-width: 768px) {
-            .post-main-title { font-size: 24px; }
-        }
-
-        /* ── Post Content styling ── */
-        .post-content-body {
-            font-size: 16px;
-            line-height: 1.85;
-            color: #555;
-        }
-        .post-content-body h1,
-        .post-content-body h2,
-        .post-content-body h3,
-        .post-content-body h4 {
-            color: #1a1a2e;
-            margin: 28px 0 14px;
-        }
-        .post-content-body img {
-            max-width: 100%;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-        .post-content-body a { color: #7a5af8; }
-        .post-content-body blockquote {
-            border-left: 4px solid #7a5af8;
-            margin: 28px 0;
-            padding: 18px 24px;
-            background: #f8f5ff;
-            border-radius: 0 8px 8px 0;
-            font-style: italic;
-            color: #555;
-        }
-        .post-content-body ul,
-        .post-content-body ol {
-            padding-left: 24px;
-            margin-bottom: 18px;
-        }
-        .post-content-body li { margin-bottom: 8px; }
-        .post-content-body p { margin-bottom: 18px; }
-
-        /* ── Tags & Share ── */
-        .post-tags { margin-top: 30px; padding-top: 20px; border-top: 1px solid #f0f0f0; }
-        .post-tags h5 { display: inline; margin-right: 10px; font-size: 15px; color: #444; }
-        .post-tags a {
-            display: inline-block;
-            background: #f0ebff;
-            color: #7a5af8;
-            padding: 4px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            margin: 4px;
-            transition: all 0.2s;
-        }
-        .post-tags a:hover { background: #7a5af8; color: #fff; }
-
-        .post-share { margin-top: 18px; }
-        .post-share h5 { display: inline; margin-right: 10px; font-size: 15px; color: #444; }
-        .post-share a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            color: white;
-            font-size: 14px;
-            margin-right: 8px;
-            transition: transform 0.2s;
-        }
-        .post-share a:hover { transform: scale(1.15); }
-        .post-share a.fac { background: #1877f2; }
-        .post-share a.twi { background: #1da1f2; }
-        .post-share a.wha { background: #25d366; }
-
-        /* ── Author Box ── */
-        .post-admin {
-            background: linear-gradient(135deg, #f8f5ff, #fffbf5);
-            border: 1px solid #ede8ff;
-            border-radius: 14px;
-            padding: 28px;
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            margin-top: 35px;
-        }
-        .post-admin img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            object-fit: cover;
-            flex-shrink: 0;
-            border: 3px solid #7a5af8;
-        }
-        .author-placeholder-avatar {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #7a5af8, #a78bfa);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 26px;
-            flex-shrink: 0;
-            border: 3px solid #7a5af8;
-        }
-        .post-admin .author-info a {
-            font-size: 17px;
-            font-weight: 600;
-            color: #1a1a2e;
-            display: block;
-            margin-bottom: 2px;
-        }
-        .post-admin .author-info span {
-            font-size: 13px;
-            color: #7a5af8;
-            display: block;
-            margin-bottom: 8px;
-        }
-        .post-admin .author-info p { font-size: 14px; color: #777; margin: 0; line-height: 1.6; }
-
-        /* ── Navigation (prev/next post) ── */
-        .post-nav {
-            display: flex;
-            justify-content: space-between;
-            gap: 16px;
-            margin: 35px 0;
-            padding: 20px 0;
-            border-top: 1px solid #f0f0f0;
-        }
-        .post-nav a {
-            font-size: 14px;
-            font-weight: 600;
-            color: #7a5af8;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            max-width: 48%;
-        }
-        .post-nav a:hover { color: #5b3fe8; }
-
-        /* ── Sidebar ── */
-        .sidebar-loading { color: #aaa; font-size: 14px; padding: 8px 0; }
-        .popular-post { display: flex; gap: 12px; margin-bottom: 18px; align-items: flex-start; }
-        .popular-post a img {
-            width: 65px;
-            height: 55px;
-            object-fit: cover;
-            border-radius: 8px;
-            flex-shrink: 0;
-        }
-        .popular-post-thumb-placeholder {
-            width: 65px;
-            height: 55px;
-            border-radius: 8px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 20px;
-            flex-shrink: 0;
-        }
-        .popular-post-info h5 { font-size: 14px; margin: 0 0 4px; line-height: 1.4; }
-        .popular-post-info h5 a { color: #333; }
-        .popular-post-info h5 a:hover { color: #7a5af8; }
-        .popular-post-info span { font-size: 12px; color: #aaa; }
-
-        /* ── Back to blog button ── */
-        .back-to-blog {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #7a5af8;
-            margin-bottom: 28px;
-        }
-        .back-to-blog:hover { color: #5b3fe8; }
-
-        /* ── No-JS fallback breadcrumb ── */
-        #dynamic-breadcrumb-title { display: none; }
+        .post-error { background:#fff5f5; border:1px solid #ffc5c5; border-radius:12px; padding:40px; text-align:center; color:#c0392b; }
+        .post-error i { font-size:48px; margin-bottom:15px; display:block; }
+        .post-error a { color:#7a5af8; text-decoration:underline; }
+        .post-featured-image { width:100%; max-height:440px; object-fit:cover; border-radius:12px; margin-bottom:32px; box-shadow:0 8px 30px rgba(0,0,0,0.1); }
+        .post-featured-placeholder { width:100%; height:280px; background:linear-gradient(135deg,#667eea,#764ba2); border-radius:12px; display:flex; align-items:center; justify-content:center; color:white; font-size:70px; margin-bottom:32px; }
+        .post-meta-bar { display:flex; flex-wrap:wrap; gap:20px; margin-bottom:24px; padding-bottom:20px; border-bottom:1px solid #f0f0f0; }
+        .post-meta-bar span { font-size:14px; color:#888; }
+        .post-meta-bar span i { color:#7a5af8; margin-right:6px; }
+        .post-meta-bar .author-name { font-weight:600; color:#444; }
+        .post-main-title { font-size:32px; font-weight:700; line-height:1.35; color:#1a1a2e; margin-bottom:28px; }
+        @media(max-width:768px) { .post-main-title { font-size:24px; } }
+        .post-content-body { font-size:16px; line-height:1.85; color:#555; }
+        .post-content-body h1,.post-content-body h2,.post-content-body h3,.post-content-body h4 { color:#1a1a2e; margin:28px 0 14px; }
+        .post-content-body img { max-width:100%; border-radius:10px; margin:20px 0; }
+        .post-content-body a { color:#7a5af8; }
+        .post-content-body blockquote { border-left:4px solid #7a5af8; margin:28px 0; padding:18px 24px; background:#f8f5ff; border-radius:0 8px 8px 0; font-style:italic; color:#555; }
+        .post-content-body ul,.post-content-body ol { padding-left:24px; margin-bottom:18px; }
+        .post-content-body li { margin-bottom:8px; }
+        .post-content-body p { margin-bottom:18px; }
+        .post-tags { margin-top:30px; padding-top:20px; border-top:1px solid #f0f0f0; }
+        .post-tags h5 { display:inline; margin-right:10px; font-size:15px; color:#444; }
+        .post-tags a { display:inline-block; background:#f0ebff; color:#7a5af8; padding:4px 14px; border-radius:20px; font-size:13px; margin:4px; transition:all 0.2s; }
+        .post-tags a:hover { background:#7a5af8; color:#fff; }
+        .post-share { margin-top:18px; }
+        .post-share h5 { display:inline; margin-right:10px; font-size:15px; color:#444; }
+        .post-share a { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; color:white; font-size:14px; margin-right:8px; transition:transform 0.2s; }
+        .post-share a:hover { transform:scale(1.15); }
+        .post-share a.fac { background:#1877f2; }
+        .post-share a.twi { background:#1da1f2; }
+        .post-share a.wha { background:#25d366; }
+        .post-admin { background:linear-gradient(135deg,#f8f5ff,#fffbf5); border:1px solid #ede8ff; border-radius:14px; padding:28px; display:flex; align-items:flex-start; gap:20px; margin-top:35px; }
+        .post-admin img { width:70px; height:70px; border-radius:50%; object-fit:cover; flex-shrink:0; border:3px solid #7a5af8; }
+        .author-placeholder-avatar { width:70px; height:70px; border-radius:50%; background:linear-gradient(135deg,#7a5af8,#a78bfa); display:flex; align-items:center; justify-content:center; color:white; font-size:26px; flex-shrink:0; border:3px solid #7a5af8; }
+        .post-admin .author-info a { font-size:17px; font-weight:600; color:#1a1a2e; display:block; margin-bottom:2px; }
+        .post-admin .author-info span { font-size:13px; color:#7a5af8; display:block; margin-bottom:8px; }
+        .post-admin .author-info p { font-size:14px; color:#777; margin:0; line-height:1.6; }
+        .post-nav { display:flex; justify-content:space-between; gap:16px; margin:35px 0; padding:20px 0; border-top:1px solid #f0f0f0; }
+        .post-nav a { font-size:14px; font-weight:600; color:#7a5af8; display:flex; align-items:center; gap:8px; max-width:48%; }
+        .post-nav a:hover { color:#5b3fe8; }
+        .sidebar-loading { color:#aaa; font-size:14px; padding:8px 0; }
+        .popular-post { display:flex; gap:12px; margin-bottom:18px; align-items:flex-start; }
+        .popular-post a img { width:65px; height:55px; object-fit:cover; border-radius:8px; flex-shrink:0; }
+        .popular-post-thumb-placeholder { width:65px; height:55px; border-radius:8px; background:linear-gradient(135deg,#667eea,#764ba2); display:flex; align-items:center; justify-content:center; color:white; font-size:20px; flex-shrink:0; }
+        .popular-post-info h5 { font-size:14px; margin:0 0 4px; line-height:1.4; }
+        .popular-post-info h5 a { color:#333; }
+        .popular-post-info h5 a:hover { color:#7a5af8; }
+        .popular-post-info span { font-size:12px; color:#aaa; }
+        .back-to-blog { display:inline-flex; align-items:center; gap:8px; font-size:14px; font-weight:600; color:#7a5af8; margin-bottom:28px; }
+        .back-to-blog:hover { color:#5b3fe8; }
     </style>
-
 </head>
-
 <body>
 
-    <!--====== PRELOADER PART START ======-->
+    <!--====== PRELOADER ======-->
     <div class="loader-wrap">
         <div class="preloader"><div class="preloader-close">Preloader Close</div></div>
         <div class="layer layer-one"><span class="overlay"></span></div>
         <div class="layer layer-two"><span class="overlay"></span></div>
         <div class="layer layer-three"><span class="overlay"></span></div>
     </div>
-    <!--====== PRELOADER PART ENDS ======-->
+    <!--====== PRELOADER ENDS ======-->
 
-    <!--====== OFFCANVAS MENU ======-->
-    <div class="off_canvars_overlay"></div>
-    <div class="offcanvas_menu">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="offcanvas_menu_wrapper">
-                        <div class="canvas_close">
-                            <a href="javascript:void(0)"><i class="fa fa-times"></i></a>
-                        </div>
-                        <div class="offcanvas-brand text-center mb-40">
-                            <img src="assets/images/Preplok-Logo.png" alt="Preplok">
-                        </div>
-                        <div id="menu" class="text-left">
-                            <ul class="offcanvas_main_menu">
-                                <li class="menu-item-has-children active">
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li class="menu-item-has-children active">
-                                    <a href="index.html#service">Features</a>
-                                </li>
-                                <li class="menu-item-has-children active">
-                                    <a href="#">Exams</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#">WAEC</a></li>
-                                        <li><a href="#">JAMB</a></li>
-                                        <li><a href="#">NECO</a></li>
-                                        <li><a href="#">Post UTME</a></li>
-                                        <li><a href="#">GCE</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children active">
-                                    <a href="single-post.html">Blog</a>
-                                </li>
-                                <li class="menu-item-has-children active">
-                                    <a href="contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="offcanvas-social">
-                            <ul class="text-center">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-widget-info">
-                            <ul>
-                                <li><a href="#"><i class="fal fa-envelope"></i> hello@preplok.com</a></li>
-                                <li><a href="#"><i class="fal fa-phone"></i> +234 (0) 913 330 3018</a></li>
-                                <li><a href="#"><i class="fal fa-map-marker-alt"></i> Abuja, Nigeria</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--====== OFFCANVAS MENU ENDS ======-->
-
-    <!--====== HEADER ======-->
-    <header class="appie-header-area appie-header-page-area appie-sticky">
-        <div class="container">
-            <div class="header-nav-box header-nav-box-3 header-nav-box-inner-page">
-                <div class="row align-items-center">
-                    <div class="col-lg-2 col-md-4 col-sm-5 col-6 order-1 order-sm-1">
-                        <div class="appie-logo-box">
-                            <a href="index.html">
-                                <img src="assets/images/Preplok-Logo.png" alt="Preplok">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-1 col-sm-1 order-3 order-sm-2">
-                        <div class="appie-header-main-menu">
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="index.html#service">Features</a></li>
-                                <li>
-                                    <a href="#">Exams <i class="fal fa-angle-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#">WAEC</a></li>
-                                        <li><a href="#">JAMB</a></li>
-                                        <li><a href="#">NECO</a></li>
-                                        <li><a href="#">Post UTME</a></li>
-                                        <li><a href="#">GCE</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="single-post.html">Blog <i class="fal fa-angle-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="single-post.html">All Posts</a></li>
-                                        <li><a href="#">Study Tips</a></li>
-                                        <li><a href="#">Success Stories</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-7 col-sm-6 col-6 order-2 order-sm-3">
-                        <div class="appie-btn-box text-right">
-                            <a class="main-btn ml-30" href="#">Download App</a>
-                            <div class="toggle-btn ml-30 canvas_open d-lg-none d-block">
-                                <i class="fa fa-bars"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!--====== HEADER ENDS ======-->
+    <!--====== SHARED COMPONENTS ======-->
+    <div id="app-overlays"></div>
+    <div id="app-header"></div>
+    <!--====== SHARED COMPONENTS ENDS ======-->
 
     <!--====== PAGE TITLE ======-->
     <div class="appie-page-title-area">
@@ -462,35 +123,26 @@
             <div class="row">
                 <!-- Main Post Content -->
                 <div class="col-lg-8 col-md-7">
-
-                    <!-- Back to blog -->
                     <a href="single-post.html" class="back-to-blog">
                         <i class="fal fa-arrow-left"></i> Back to All Posts
                     </a>
-
-                    <!-- Dynamic post content injected here -->
                     <div id="single-post-area">
                         <div class="post-loading">
                             <div class="spinner"></div>
                             <p>Loading article...</p>
                         </div>
                     </div>
-
                 </div>
 
                 <!-- Sidebar -->
                 <div class="col-lg-4 col-md-5">
                     <div class="blog-sidebar">
-
-                        <!-- Search -->
                         <aside class="widget widget-search">
                             <form class="search-form" onsubmit="handleSidebarSearch(event)">
                                 <input type="search" id="sidebar-search-input" placeholder="Search posts...">
                                 <button type="submit"><i class="fal fa-search"></i></button>
                             </form>
                         </aside>
-
-                        <!-- Exam Categories -->
                         <aside class="widget widget-categories">
                             <h3 class="widget-title">Exam Categories</h3>
                             <ul>
@@ -499,26 +151,22 @@
                                 <li><a href="single-post.html?q=NECO">NECO</a><span></span></li>
                                 <li><a href="single-post.html?q=Post+UTME">Post UTME</a><span></span></li>
                                 <li><a href="single-post.html?q=GCE">GCE</a><span></span></li>
-                                <li><a href="single-post.html?q=study tips">Study Tips</a><span></span></li>
+                                <li><a href="single-post.html?q=study+tips">Study Tips</a><span></span></li>
                                 <li><a href="single-post.html">All Posts</a><span></span></li>
                             </ul>
                         </aside>
-
-                        <!-- Recent Posts -->
                         <aside class="widget widget-trend-post">
                             <h3 class="widget-title">Recent Posts</h3>
                             <div id="recent-posts-sidebar">
                                 <p class="sidebar-loading">Loading recent posts...</p>
                             </div>
                         </aside>
-
-                        <!-- Tags -->
                         <aside class="widget">
                             <h3 class="widget-title">Popular Tags</h3>
-                            <div class="tags" id="post-tags-sidebar">
+                            <div class="tags">
                                 <a href="single-post.html?q=WAEC">WAEC</a>
                                 <a href="single-post.html?q=JAMB">JAMB</a>
-                                <a href="single-post.html?q=exam tips">Exam Tips</a>
+                                <a href="single-post.html?q=exam+tips">Exam Tips</a>
                                 <a href="single-post.html?q=study">Study</a>
                                 <a href="single-post.html?q=AI">AI Learning</a>
                                 <a href="single-post.html?q=university">University</a>
@@ -526,95 +174,18 @@
                                 <a href="single-post.html?q=English">English</a>
                             </div>
                         </aside>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
     <!-- Blog Detail End -->
 
-    <!--====== FOOTER ======-->
-    <section class="appie-footer-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-about-widget footer-about-widget-5">
-                        <div class="logo">
-                            <a href="index.html"><img src="assets/images/logo-5.png" alt="Preplok"></a>
-                        </div>
-                        <p>Preplok is the AI-powered exam preparation app helping Nigerian students excel in WAEC, JAMB, NECO, and Post UTME.</p>
-                        <a href="index.html">Learn More <i class="fal fa-arrow-right"></i></a>
-                        <div class="social mt-30">
-                            <ul>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <div class="footer-navigation footer-navigation-5">
-                        <h4 class="title">Features</h4>
-                        <ul>
-                            <li><a href="#">AI-Powered Hints</a></li>
-                            <li><a href="#">Past Questions</a></li>
-                            <li><a href="#">Mock Exams</a></li>
-                            <li><a href="#">Performance Analytics</a></li>
-                            <li><a href="#">Study Plans</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-navigation footer-navigation-5">
-                        <h4 class="title">Exams</h4>
-                        <ul>
-                            <li><a href="#">WAEC</a></li>
-                            <li><a href="#">JAMB</a></li>
-                            <li><a href="#">NECO</a></li>
-                            <li><a href="#">Post UTME</a></li>
-                            <li><a href="#">GCE</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget-info">
-                        <h4 class="title">Contact Us</h4>
-                        <ul>
-                            <li><a href="#"><i class="fal fa-envelope"></i> hello@preplok.com</a></li>
-                            <li><a href="#"><i class="fal fa-phone"></i> +234 (0) 913 330 3018</a></li>
-                            <li><a href="#"><i class="fal fa-map-marker-alt"></i> Abuja, Nigeria</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="footer-copyright d-flex align-items-center justify-content-between pt-35">
-                        <div class="apps-download-btn">
-                            <ul>
-                                <li><a href="#"><i class="fab fa-apple"></i> Download for iOS</a></li>
-                                <li><a class="item-2" href="#"><i class="fab fa-google-play"></i> Download for Android</a></li>
-                            </ul>
-                        </div>
-                        <div class="copyright-text">
-                            <p>Copyright &copy; 2024 Preplok. All rights reserved.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--====== FOOTER ENDS ======-->
+    <!--====== SHARED FOOTER ======-->
+    <div id="app-footer"></div>
+    <!--====== SHARED FOOTER ENDS ======-->
 
-    <!--====== BACK TO TOP ======-->
-    <div class="back-to-top">
-        <a href="#"><i class="fal fa-arrow-up"></i></a>
-    </div>
-
-    <!--====== JS FILES ======-->
+    <!--====== JS ======-->
     <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -625,240 +196,133 @@
     <script src="assets/js/TweenMax.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/components.js"></script>
     <script src="assets/js/main.js"></script>
 
     <!--====== WordPress REST API — Single Post ======-->
     <script>
-        const WP_API_BASE = 'https://preplok.com/wp-json/wp/v2';
+        var WP_API_BASE = 'https://preplok.com/wp-json/wp/v2';
 
-        // ── Utility helpers ──
-        function stripHtml(html) {
-            const d = document.createElement('div');
-            d.innerHTML = html;
-            return d.textContent || d.innerText || '';
-        }
-        function formatDate(dateStr) {
-            return new Date(dateStr).toLocaleDateString('en-GB', {
-                day: 'numeric', month: 'long', year: 'numeric'
-            });
-        }
-        function getUrlParam(name) {
-            return new URLSearchParams(window.location.search).get(name);
-        }
-        function truncate(str, len) {
-            return str.length > len ? str.slice(0, len) + '…' : str;
-        }
+        function stripHtml(html) { var d = document.createElement('div'); d.innerHTML = html; return d.textContent || d.innerText || ''; }
+        function formatDate(s) { return new Date(s).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}); }
+        function getUrlParam(n) { return new URLSearchParams(window.location.search).get(n); }
+        function trunc(s,l) { return s.length > l ? s.slice(0,l) + '…' : s; }
 
-        // ── Render the full post ──
         function renderPost(post, prevPost, nextPost) {
-            const title       = post.title.rendered;
-            const content     = post.content.rendered;
-            const date        = formatDate(post.date);
-            const modified    = formatDate(post.modified);
-            const pageUrl     = encodeURIComponent(window.location.href);
-            const pageTitle   = encodeURIComponent(title);
+            var title      = post.title.rendered;
+            var content    = post.content.rendered;
+            var date       = formatDate(post.date);
+            var modified   = formatDate(post.modified);
+            var pageUrl    = encodeURIComponent(window.location.href);
+            var pageTitle  = encodeURIComponent(stripHtml(title));
+            var authorData = post._embedded && post._embedded.author && post._embedded.author[0];
+            var authorName = authorData ? authorData.name : 'Preplok Team';
+            var authorBio  = authorData && authorData.description ? authorData.description : 'Expert exam prep content for Nigerian students — by the Preplok Team.';
+            var authorAvatar = authorData && authorData.avatar_urls ? authorData.avatar_urls['96'] : null;
+            var featMedia  = post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0];
+            var featImgUrl = featMedia ? featMedia.source_url : null;
+            var terms      = post._embedded && post._embedded['wp:term'] ? post._embedded['wp:term'].reduce(function(a,b){return a.concat(b);},[]) : [];
+            var tags       = terms.filter(function(t){return t.taxonomy==='post_tag';});
+            var cats       = terms.filter(function(t){return t.taxonomy==='category';});
 
-            // Author
-            const authorData  = post._embedded && post._embedded.author && post._embedded.author[0];
-            const authorName  = authorData ? authorData.name : 'Preplok Team';
-            const authorBio   = authorData && authorData.description ? authorData.description : 'Expert exam preparation content for Nigerian students — brought to you by the Preplok Team.';
-            const authorAvatar = authorData && authorData.avatar_urls ? authorData.avatar_urls['96'] : null;
-
-            // Featured image
-            const featMedia   = post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0];
-            const featImgUrl  = featMedia ? featMedia.source_url : null;
-            const featImgAlt  = featMedia ? (featMedia.alt_text || title) : title;
-
-            // Tags
-            const terms       = post._embedded && post._embedded['wp:term'] ? post._embedded['wp:term'].flat() : [];
-            const tags        = terms.filter(t => t.taxonomy === 'post_tag');
-            const cats        = terms.filter(t => t.taxonomy === 'category');
-
-            // Update page meta
-            document.getElementById('page-title').textContent         = `${stripHtml(title)} | Preplok Blog`;
-            document.getElementById('meta-description').content       = truncate(stripHtml(post.excerpt ? post.excerpt.rendered : content), 160);
-            document.getElementById('og-title').content               = stripHtml(title);
-            document.getElementById('og-description').content         = truncate(stripHtml(post.excerpt ? post.excerpt.rendered : content), 160);
+            document.getElementById('page-title').textContent = trunc(stripHtml(title),60) + ' | Preplok Blog';
+            document.getElementById('meta-description').content = trunc(stripHtml(post.excerpt ? post.excerpt.rendered : content), 160);
+            document.getElementById('og-title').content = stripHtml(title);
+            document.getElementById('og-description').content = trunc(stripHtml(post.excerpt ? post.excerpt.rendered : content),160);
             if (featImgUrl) document.getElementById('og-image').content = featImgUrl;
+            var bc = document.getElementById('dynamic-breadcrumb-title');
+            if (bc) bc.textContent = trunc(stripHtml(title), 40);
 
-            // Breadcrumb
-            const bc = document.getElementById('dynamic-breadcrumb-title');
-            bc.textContent = truncate(stripHtml(title), 40);
-            bc.style.display = 'inline';
-
-            // Featured image
-            const imgHtml = featImgUrl
-                ? `<img class="post-featured-image" src="${featImgUrl}" alt="${featImgAlt}">`
-                : `<div class="post-featured-placeholder"><i class="fal fa-book-open"></i></div>`;
-
-            // Category badges
-            const catBadges = cats.map(c => `<span style="background:#eef2ff;color:#4f46e5;padding:3px 12px;border-radius:20px;font-size:13px;margin-right:8px;">${c.name}</span>`).join('');
-
-            // Tags HTML
-            const tagsHtml = tags.length
-                ? `<div class="post-tags"><h5>Tags:</h5>${tags.map(t => `<a href="single-post.html?q=${encodeURIComponent(t.name)}">${t.name}</a>`).join('')}</div>`
-                : '';
-
-            // Share buttons
-            const shareHtml = `
-                <div class="post-share" style="margin-top:14px;">
-                    <h5>Share:</h5>
-                    <a class="fac" href="https://www.facebook.com/sharer/sharer.php?u=${pageUrl}" target="_blank" rel="noopener" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a class="twi" href="https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}" target="_blank" rel="noopener" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
-                    <a class="wha" href="https://wa.me/?text=${pageTitle}%20${pageUrl}" target="_blank" rel="noopener" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                </div>`;
-
-            // Author box
-            const avatarHtml = authorAvatar
-                ? `<img src="${authorAvatar}" alt="${authorName}">`
-                : `<div class="author-placeholder-avatar"><i class="fal fa-user"></i></div>`;
-
-            // Prev/Next navigation
-            let navHtml = '';
+            var imgHtml  = featImgUrl
+                ? '<img class="post-featured-image" src="' + featImgUrl + '" alt="' + stripHtml(title) + '">'
+                : '<div class="post-featured-placeholder"><i class="fal fa-book-open"></i></div>';
+            var catBadges = cats.map(function(c){ return '<span style="background:#eef2ff;color:#4f46e5;padding:3px 12px;border-radius:20px;font-size:13px;margin-right:8px;">' + c.name + '</span>'; }).join('');
+            var tagsHtml  = tags.length ? '<div class="post-tags"><h5>Tags:</h5>' + tags.map(function(t){ return '<a href="single-post.html?q=' + encodeURIComponent(t.name) + '">' + t.name + '</a>'; }).join('') + '</div>' : '';
+            var shareHtml = '<div class="post-share"><h5>Share:</h5>'
+                + '<a class="fac" href="https://www.facebook.com/sharer/sharer.php?u=' + pageUrl + '" target="_blank" rel="noopener" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>'
+                + '<a class="twi" href="https://twitter.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle + '" target="_blank" rel="noopener" title="Share on Twitter"><i class="fab fa-twitter"></i></a>'
+                + '<a class="wha" href="https://wa.me/?text=' + pageTitle + '%20' + pageUrl + '" target="_blank" rel="noopener" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>'
+                + '</div>';
+            var avatarHtml = authorAvatar
+                ? '<img src="' + authorAvatar + '" alt="' + authorName + '">'
+                : '<div class="author-placeholder-avatar"><i class="fal fa-user"></i></div>';
+            var navHtml = '';
             if (prevPost || nextPost) {
-                navHtml = `<div class="post-nav">
-                    ${prevPost ? `<a href="single-news.html?id=${prevPost.id}"><i class="fal fa-arrow-left"></i> ${truncate(stripHtml(prevPost.title.rendered), 35)}</a>` : '<span></span>'}
-                    ${nextPost ? `<a href="single-news.html?id=${nextPost.id}" style="text-align:right;">${truncate(stripHtml(nextPost.title.rendered), 35)} <i class="fal fa-arrow-right"></i></a>` : '<span></span>'}
-                </div>`;
+                navHtml = '<div class="post-nav">'
+                    + (prevPost ? '<a href="single-news.html?id=' + prevPost.id + '"><i class="fal fa-arrow-left"></i> ' + trunc(stripHtml(prevPost.title.rendered),35) + '</a>' : '<span></span>')
+                    + (nextPost ? '<a href="single-news.html?id=' + nextPost.id + '" style="text-align:right;">' + trunc(stripHtml(nextPost.title.rendered),35) + ' <i class="fal fa-arrow-right"></i></a>' : '<span></span>')
+                    + '</div>';
             }
 
-            const html = `
-                <div class="single-post-area">
-                    ${imgHtml}
-                    <div style="margin-bottom:12px;">${catBadges}</div>
-                    <h1 class="post-main-title">${title}</h1>
-                    <div class="post-meta-bar">
-                        <span><i class="fal fa-calendar-alt"></i>${date}</span>
-                        <span><i class="fal fa-user"></i><span class="author-name">${authorName}</span></span>
-                        <span><i class="fal fa-clock"></i>Updated ${modified}</span>
-                        ${post.comment_count ? `<span><i class="fal fa-comments"></i>${post.comment_count} Comments</span>` : ''}
-                    </div>
-                    <div class="post-content-body">${content}</div>
-                    ${tagsHtml}
-                    ${shareHtml}
-                    <div class="post-admin">
-                        ${avatarHtml}
-                        <div class="author-info">
-                            <a href="#">${authorName}</a>
-                            <span>About the Author</span>
-                            <p>${authorBio}</p>
-                        </div>
-                    </div>
-                    ${navHtml}
-                </div>`;
-
-            document.getElementById('single-post-area').innerHTML = html;
+            document.getElementById('single-post-area').innerHTML =
+                '<div class="single-post-area">'
+                + imgHtml + '<div style="margin-bottom:12px;">' + catBadges + '</div>'
+                + '<h1 class="post-main-title">' + title + '</h1>'
+                + '<div class="post-meta-bar">'
+                + '<span><i class="fal fa-calendar-alt"></i>' + date + '</span>'
+                + '<span><i class="fal fa-user"></i><span class="author-name">' + authorName + '</span></span>'
+                + '<span><i class="fal fa-clock"></i>Updated ' + modified + '</span>'
+                + '</div>'
+                + '<div class="post-content-body">' + content + '</div>'
+                + tagsHtml + shareHtml
+                + '<div class="post-admin">' + avatarHtml + '<div class="author-info"><a href="#">' + authorName + '</a><span>About the Author</span><p>' + authorBio + '</p></div></div>'
+                + navHtml
+                + '</div>';
         }
 
-        // ── Fetch adjacent posts for prev/next nav ──
-        async function fetchAdjacentPosts(postId, postDate) {
+        async function fetchAdjacentPosts(postDate) {
             try {
-                const [prevRes, nextRes] = await Promise.all([
-                    fetch(`${WP_API_BASE}/posts?before=${postDate}&per_page=1&orderby=date&order=desc&_fields=id,title`),
-                    fetch(`${WP_API_BASE}/posts?after=${postDate}&per_page=1&orderby=date&order=asc&_fields=id,title`)
-                ]);
-                const prev = prevRes.ok ? await prevRes.json() : [];
-                const next = nextRes.ok ? await nextRes.json() : [];
+                var prevRes = await fetch(WP_API_BASE + '/posts?before=' + postDate + '&per_page=1&orderby=date&order=desc&_fields=id,title');
+                var nextRes = await fetch(WP_API_BASE + '/posts?after=' + postDate + '&per_page=1&orderby=date&order=asc&_fields=id,title');
+                var prev = prevRes.ok ? await prevRes.json() : [];
+                var next = nextRes.ok ? await nextRes.json() : [];
                 return { prevPost: prev[0] || null, nextPost: next[0] || null };
-            } catch {
-                return { prevPost: null, nextPost: null };
-            }
+            } catch(e) { return { prevPost: null, nextPost: null }; }
         }
 
-        // ── Fetch sidebar recent posts ──
         async function fetchRecentPostsSidebar() {
-            const container = document.getElementById('recent-posts-sidebar');
+            var c = document.getElementById('recent-posts-sidebar');
             try {
-                const res   = await fetch(`${WP_API_BASE}/posts?per_page=4&_embed&orderby=date&order=desc`);
-                const posts = await res.json();
-
-                if (!posts.length) {
-                    container.innerHTML = '<p class="sidebar-loading">No recent posts yet.</p>';
-                    return;
-                }
-
-                container.innerHTML = posts.map(p => {
-                    const t    = p.title.rendered;
-                    const d    = formatDate(p.date);
-                    const url  = `single-news.html?id=${p.id}`;
-                    const img  = p._embedded && p._embedded['wp:featuredmedia'] && p._embedded['wp:featuredmedia'][0]
-                        ? p._embedded['wp:featuredmedia'][0].source_url : null;
-
-                    const imgEl = img
-                        ? `<a href="${url}"><img src="${img}" alt="${t}"></a>`
-                        : `<a href="${url}"><div class="popular-post-thumb-placeholder"><i class="fal fa-book"></i></div></a>`;
-
-                    return `
-                        <div class="popular-post">
-                            ${imgEl}
-                            <div class="popular-post-info">
-                                <h5><a href="${url}">${t}</a></h5>
-                                <span>${d}</span>
-                            </div>
-                        </div>`;
+                var res   = await fetch(WP_API_BASE + '/posts?per_page=4&_embed&orderby=date&order=desc');
+                var posts = await res.json();
+                if (!posts.length) { c.innerHTML = '<p class="sidebar-loading">No recent posts yet.</p>'; return; }
+                c.innerHTML = posts.map(function(p) {
+                    var t   = p.title.rendered, d = formatDate(p.date), url = 'single-news.html?id=' + p.id;
+                    var img = p._embedded && p._embedded['wp:featuredmedia'] && p._embedded['wp:featuredmedia'][0] ? p._embedded['wp:featuredmedia'][0].source_url : null;
+                    var imgEl = img ? '<a href="' + url + '"><img src="' + img + '" alt="' + t + '"></a>' : '<a href="' + url + '"><div class="popular-post-thumb-placeholder"><i class="fal fa-book"></i></div></a>';
+                    return '<div class="popular-post">' + imgEl + '<div class="popular-post-info"><h5><a href="' + url + '">' + t + '</a></h5><span>' + d + '</span></div></div>';
                 }).join('');
-            } catch {
-                container.innerHTML = '<p class="sidebar-loading">Could not load recent posts.</p>';
-            }
+            } catch(e) { c.innerHTML = '<p class="sidebar-loading">Could not load recent posts.</p>'; }
         }
 
-        // ── Main: load single post ──
         async function loadPost() {
-            const postId = getUrlParam('id');
-            const container = document.getElementById('single-post-area');
-
+            var postId    = getUrlParam('id');
+            var container = document.getElementById('single-post-area');
             if (!postId || isNaN(postId)) {
-                container.innerHTML = `
-                    <div class="post-error">
-                        <i class="fal fa-exclamation-triangle"></i>
-                        <strong>Post not found</strong>
-                        <p>No post ID was provided in the URL.</p>
-                        <a href="single-post.html">← Browse all posts</a>
-                    </div>`;
+                container.innerHTML = '<div class="post-error"><i class="fal fa-exclamation-triangle"></i><strong>Post not found</strong><p>No post ID in the URL.</p><a href="single-post.html">← Browse all posts</a></div>';
                 return;
             }
-
             try {
-                const res = await fetch(`${WP_API_BASE}/posts/${postId}?_embed`);
-
+                var res = await fetch(WP_API_BASE + '/posts/' + postId + '?_embed');
                 if (res.status === 404) {
-                    container.innerHTML = `
-                        <div class="post-error">
-                            <i class="fal fa-search"></i>
-                            <strong>Post not found</strong>
-                            <p>The article you're looking for may have been moved or deleted.</p>
-                            <a href="single-post.html">← Browse all posts</a>
-                        </div>`;
+                    container.innerHTML = '<div class="post-error"><i class="fal fa-search"></i><strong>Post not found</strong><p>This article may have been moved or deleted.</p><a href="single-post.html">← Browse all posts</a></div>';
                     return;
                 }
-
-                if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
-                const post = await res.json();
-                const { prevPost, nextPost } = await fetchAdjacentPosts(post.id, post.date);
-
-                renderPost(post, prevPost, nextPost);
-
-            } catch (err) {
-                container.innerHTML = `
-                    <div class="post-error">
-                        <i class="fal fa-wifi-slash"></i>
-                        <strong>Could not load article</strong>
-                        <p>We're having trouble reaching the Preplok blog. Please try again shortly.</p>
-                        <p><small style="color:#bbb;">Error: ${err.message}</small></p>
-                        <a href="single-post.html">← Browse all posts</a>
-                    </div>`;
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                var post = await res.json();
+                var adj  = await fetchAdjacentPosts(post.date);
+                renderPost(post, adj.prevPost, adj.nextPost);
+            } catch(err) {
+                container.innerHTML = '<div class="post-error"><i class="fal fa-wifi-slash"></i><strong>Could not load article</strong><p>Please check your connection and try again.</p><a href="single-post.html">← Browse all posts</a></div>';
             }
         }
 
-        // ── Sidebar search ──
         function handleSidebarSearch(e) {
             e.preventDefault();
-            const q = document.getElementById('sidebar-search-input').value.trim();
-            if (q) window.location.href = `single-post.html?q=${encodeURIComponent(q)}`;
+            var q = document.getElementById('sidebar-search-input').value.trim();
+            if (q) window.location.href = 'single-post.html?q=' + encodeURIComponent(q);
         }
 
-        // ── Init ──
         loadPost();
         fetchRecentPostsSidebar();
     </script>
